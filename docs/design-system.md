@@ -1,13 +1,19 @@
-# Editorial construction design system
+# Construction website design system
 
-The earlier green overlay/card-grid homepage was rejected by the user. This revision replaces its composition across the whole site rather than changing card colours.
+The palette uses paper #f8f7f3, limestone #e8e4da, charcoal #242824 and source-brand green #0b6244. Self-hosted Bodoni Moda gives headings character; DM Sans keeps controls and body copy readable. Actual construction photographs supply visual detail without invented project stories.
 
-The palette returns to warm mineral tones: paper #f8f7f3, limestone #e8e4da, charcoal #242824 and green #0b6244, alongside the original source-site wordmark. Bodoni Moda regular/italic gives headings an architectural rhythm; DM Sans supports readable descriptions, navigation and forms. Both families are self-hosted. Critical faces are preloaded, and explicit image geometry avoids late layout shifts.
+## Composition and rows
 
-The opening composition pairs the headline with a clear, uncovered project photograph and a smaller timber detail. There is no dark photograph overlay. The content has a defined sequence: introduction, services, selected work, client feedback, project questions and contact.
+The homepage pairs a clear project photograph with the headline, followed by nine service tiles, six selected photographs, original feedback, practical project questions and contact. Heading scale, common content margins and generous spacing establish hierarchy. Labels have useful service names and direct links; hover is supplementary.
 
-Seven service links form a ruled index next to one large project photograph. Pointer hover and keyboard focus display relevant source images without changing the link behaviour. With JavaScript disabled all seven links remain usable and the brickwork photograph remains visible. On phones the list and photograph stack vertically.
+Complete rows are mandatory. Nine tiles use three columns on desktop, three on tablet and one on phone. Six photographs use three, two and one. The 16-photo portfolio uses four, two and one. Other repeated groups choose columns that divide their item count. Cards in a row have equal width and height; no staggered columns or masonry leftovers. Browser tests check every marked grid on all 24 routes at widths 360, 390, 768, 1024, 1440 and 1920.
 
-Selected work uses four large photographs in staggered columns. The complete portfolio retains all 16 source photographs in a natural-aspect-ratio masonry layout. Source captions describe visible work without fabricated client names, places, dates or outcomes. Service, about, contact, review and legal pages share the same typography, colour and spacing system.
+## Liquid Glass
 
-Buttons, navigation and disclosures have keyboard focus states. The mobile contact bar and menu preserve their existing interactions. Real no-JavaScript navigation and PHP form behaviour remain supported. Reduced-motion preferences disable incidental transitions. No stock badges, invented figures, decorative icon grids or generated project imagery are introduced.
+Subtle translucency appears in the floating navigation, service navigation captions and WhatsApp control. Warm surfaces, fine highlights and restrained shadows give depth. Body text and the enquiry form use readable solid surfaces. Unsupported blur retains a high-opacity background; reduced-transparency, increased-contrast and forced-colour preferences use solid surfaces. Reduced-motion preferences remove incidental motion. Focus remains visible and touch targets remain practical.
+
+This follows Apple's recommendation to reserve Liquid Glass for controls and navigation, rather than placing layers of translucent content over one another. NN/g's visual design principles inform hierarchy, alignment, deliberate colour and useful imagery. These are web adaptations, not a claim to implement Apple's native material system.
+
+Source portfolio photographs use contained frames so their full content remains visible. Hero and service thumbnails have deliberate crops and explicit image geometry. No stock badges, fabricated statistics or generated construction photographs are used.
+
+References: https://developer.apple.com/design/human-interface-guidelines/materials ; https://www.nngroup.com/articles/good-visual-design/ ; https://web.dev/articles/vitals . Reviewed 04/10/2026.

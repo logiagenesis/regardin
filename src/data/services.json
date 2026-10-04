@@ -40,10 +40,19 @@
   },
   {
     "slug": "carpentry-decking-pergolas",
-    "title": "Carpentry, decking & pergolas",
-    "short": "Timber pergolas, hardwood decks and practical custom carpentry.",
-    "description": "Make more of your outdoor space with a timber pergola or hardwood deck. Regardin also undertakes carpentry work, including the cabinetry and walk-in closet work shown in the existing portfolio.",
-    "items": ["Custom timber pergolas", "Hardwood decking", "Carpentry and walk-in closet work"],
+    "title": "Carpentry & fitted joinery",
+    "short": "Cabinetry, walk-in closets and practical timber details.",
+    "description": "Make useful space with fitted cabinetry, walk-in closets and custom carpentry. Bring together the storage you need, a layout that suits the room and timber details that finish the space.",
+    "items": ["Fitted cabinetry", "Walk-in closet work", "Custom carpentry and timber details"],
+    "consideration": "Share the space, approximate dimensions and how you want to use it. Layout, material choices and the fitting requirements need to be agreed for your project.",
+    "drawing": "timber"
+  },
+  {
+    "slug": "decking-pergolas",
+    "title": "Decking & timber pergolas",
+    "short": "Hardwood decks, timber pergolas and outdoor living spaces.",
+    "description": "Make the garden part of your home with a hardwood deck or timber pergola. Create an outdoor space around the way you want to use it, with the size, timber and supporting structure agreed for your property.",
+    "items": ["Hardwood decking", "Custom timber pergolas", "Outdoor timber structures"],
     "consideration": "Share the size, intended use and a photograph of the area. Timber choice, supporting structure, exposure and maintenance requirements should be agreed for your project.",
     "drawing": "timber"
   },
@@ -62,11 +71,20 @@
   },
   {
     "slug": "plastering-screeds-pool-plastering",
-    "title": "Plastering, screeds & pool finishes",
-    "short": "Wall plaster, floor screeds and pool finishes.",
-    "description": "Complete the walls, floors and pool surfaces around your property. Regardin’s existing portfolio includes pool plastering, scratch plaster and floor screeds alongside building and renovation work.",
-    "items": ["Wall and scratch plastering", "Floor screeds", "Pool plastering"],
+    "title": "Plastering & floor screeds",
+    "short": "Wall plaster, surface preparation and floor screeds.",
+    "description": "Prepare and finish the walls and floors around your property. Regardin undertakes wall plastering, scratch plaster finishes and floor screeds as part of building and renovation work.",
+    "items": ["Wall plastering", "Scratch plaster finishes", "Floor screeds"],
     "consideration": "Photographs of the existing surface help identify the work. Moisture, cracks, the substrate and the intended finish need assessment before preparation and materials are agreed.",
+    "drawing": "finish"
+  },
+  {
+    "slug": "pool-structures-finishes",
+    "title": "Pool structures & finishes",
+    "short": "Concrete pool structures and pool plastering.",
+    "description": "Plan the structure and the finish together. Regardin undertakes concrete pool structures and pool plastering, with the work defined around your drawings, the site and the condition of any existing surfaces.",
+    "items": ["Concrete pool structures", "Pool plastering", "Pool surface finishing"],
+    "consideration": "Send photographs, dimensions and any drawings. The existing structure, surface condition, drainage and specialist design requirements need assessment before the scope and materials are agreed.",
     "drawing": "finish"
   },
   {

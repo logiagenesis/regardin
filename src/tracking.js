@@ -4,12 +4,9 @@ export function trackEvent(name, parameters = {}) {
   current?.track(name, parameters);
 }
 export function initialiseTracking(config) {
-  if (
-    !config.approved ||
-    config.mode !== 'production' ||
-    !/^GTM-[A-Z0-9]+$/.test(config.gtmId || '')
-  )
-    return null;
+  const useGtm = /^GTM-[A-Z0-9]+$/.test(config.gtmId || '');
+  const useGa4 = /^G-[A-Z0-9]+$/.test(config.ga4Id || '');
+  if (!config.approved || config.mode !== 'production' || (!useGtm && !useGa4)) return null;
   window.dataLayer = window.dataLayer || [];
   const consentCommand = function () {
     window.dataLayer.push(arguments);
@@ -45,9 +42,20 @@ export function initialiseTracking(config) {
     banner.hidden = true;
     if (allow && !loaded) {
       loaded = true;
-      window.dataLayer.push({ 'gtm.start': Date.now(), event: 'gtm.js' });
       const script = document.createElement('script');
-      script.src = 'https://www.googletagmanager.com/gtm.js?id=' + config.gtmId;
+      if (useGtm) {
+        window.dataLayer.push({ 'gtm.start': Date.now(), event: 'gtm.js' });
+        script.src = 'https://www.googletagmanager.com/gtm.js?id=' + config.gtmId;
+      } else {
+        consentCommand('js', new Date());
+        consentCommand('config', config.ga4Id, { send_page_view: false });
+        consentCommand('event', 'page_view', {
+          page_location: location.origin + location.pathname,
+          page_referrer: '',
+          page_title: document.title,
+        });
+        script.src = 'https://www.googletagmanager.com/gtag/js?id=' + config.ga4Id;
+      }
       script.async = true;
       document.head.append(script);
     }
@@ -97,6 +105,7 @@ export function initialiseTracking(config) {
       if (typeof parameters.count === 'number' && parameters.count >= 0 && parameters.count <= 5)
         safe.count = parameters.count;
       window.dataLayer.push({ event: name, ...safe });
+      if (!useGtm) consentCommand('event', name, safe);
     },
     withdraw() {
       apply(false);
@@ -110,6 +119,7 @@ export function initialiseTracking(config) {
     const href = event.target.closest('a')?.getAttribute('href') || '';
     if (href.startsWith('tel:')) controller.track('click_call');
     if (href.startsWith('mailto:')) controller.track('click_email');
+    if (href.startsWith('https://wa.me/')) controller.track('click_whatsapp');
   });
   if (
     location.pathname.startsWith('/projects/') &&

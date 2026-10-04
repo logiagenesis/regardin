@@ -1,33 +1,29 @@
-# Handover — 01/10/2026
+# Handover — 04/10/2026
 
-## Rebuilt construction website
+The consolidated project is REgardin_GPT, on main. Both supplied repositories and Drive documents are reconciled in docs/project-integration.md. The source scaffold's Node pin, banned-copy checker and command aliases are integrated into the fuller application without rewriting repository history.
 
-22 routes cover the homepage, company, seven services, portfolio, construction gallery, planning, reviews, FAQ, contact, areas, legal drafts, status, styleguide and 404. A dedicated copywriter rewrote the main content against the archived source site. The new homepage uses a split photographic opening, warm mineral tones, Bodoni Moda headings, a compact interactive service index and staggered selected work. The heavy overlay and repeated boxed homepage cards have been removed. Service pages share the new type and spacing system, with shorter headings and actual source photographs; the original green Regardin logo is retained. The portfolio contains 16 selected source photographs; no client names, locations, dates or project outcomes are invented.
+## Website and design
 
-The user explicitly authorised source-image reuse for this redesign. Original source URLs and hashes are recorded in docs/asset-manifest.csv and src/data/assets.json; copy sources are recorded in src/data/copy.json. Committed responsive AVIF/WebP derivatives strip EXIF/GPS and support reproducible builds without the private original-photo archive. Original testimonial wording remains intact. Production ownership, client permissions and business/legal review remain separate launch items.
+24 routes include nine source-grounded services. The homepage has nine complete service tiles and six selected photographs; the 16-photo portfolio uses complete rows. Geometry is checked across every marked grid on every route at six widths. Subtle Liquid Glass appears in navigation and controls, with solid accessibility fallbacks. Original logo, photographs, +27 79 454 9780 and regardbothma@icloud.com are retained. WhatsApp, phone, email, quote links and native/copy/WhatsApp portfolio sharing are implemented.
 
-## Hosting and enquiries
+SEO metadata, source-grounded business/service schema, visible-FAQ schema, social cards and canonical/base handling are checked. The beta deliberately remains noindex with an empty sitemap. Six concrete social artwork exports and captions accompany paused Google Ads and group-marketing plans. No campaigns, social posts or group messages are sent.
 
-User-confirmed full-site hosting is **cPanel**, overriding the attachment’s default. The separate static preview is **https://logiagenesis.github.io/REgardin_GPT/**. GitHub Actions deploys pushes to main; the preceding Pages release was observed successful. The current release’s workflow result is recorded in the release receipt after push. Direct preview HTTP access from this environment is blocked by the network proxy, so remote page rendering is not claimed.
+## Contact and Google integrations
 
-The committed releases/regardin-cpanel-preview.zip and checksum contain root-path static pages, Apache configuration and PHP enquiry handling. Node and Cloudflare are not required on the host. GitHub Pages uses repository-prefixed links and cannot execute PHP; its backend is deliberately disabled, with call/email brief preparation available.
+Formspree is supported through native HTML POST and progressive AJAX. No endpoint has been provided, so email-brief/call/WhatsApp fallback remains active. Synthetic tests cover accepted response, rejection, preserved inputs and duplicate prevention; no actual Formspree mailbox delivery is claimed. Attachments are excluded from the Formspree adapter until its upload plan is confirmed.
 
-PHP 8.2+ with PDO SQLite and fileinfo stores enquiries and queued notifications transactionally in private SQLite before uploading/notifying. Session CSRF, origin, honeypot, rate limiting, idempotency, MIME/count/size limits and expiring private-download links are implemented. Native HTML POST preserves escaped error input and shows a receipt only after storage. Local PHP HTTP tests exercise these paths. Failed mail handoff queues retry; an interrupted sending attempt needs operator review to avoid accidental duplicate delivery.
+Consent-gated direct GA4 or GTM and Search Console HTML verification configuration are implemented. Real identifiers, approvals and account access remain unavailable; tracking defaults off. Build variable instructions and required recipient/property checks are in docs/marketing-activation.md. No passwords or secret keys are needed for these public identifiers.
 
-No cPanel staging access is available. Host PHP/session/Apache/HTTPS behaviour and actual mailbox delivery remain unverified. Upload the ZIP into an isolated staging document root with private files outside every public root, configure confirmed origin/mail/storage/secrets and the private retry cron, then complete staging acceptance using docs/cpanel-deployment.md. Existing live WordPress and mail DNS remain untouched; no primary-domain cutover is authorised.
+## Hosting
 
-## Source review and other deliverables
+Shareable beta: https://logiagenesis.github.io/REgardin_GPT/ . Pushes to main trigger GitHub Pages. The current remote SHA and workflow/public checks are reported after publishing; an earlier deployed beta was reachable during this audit. Full production hosting remains user-confirmed cPanel. releases/regardin-cpanel-preview.zip and its checksum package root-path static pages, Apache configuration and the private PHP/SQLite enquiry backend. When Formspree is configured, it takes precedence for contact submission.
 
-The attached master prompt is preserved byte-for-byte. Nine original Drive audits were read and reconciled. A separate Google Docs export returned 403; the attachment remains the source document. The old WordPress site was archived across 44 sitemap URLs with Chromium rendering and TLS-verified curl mediation (one rendered archive route returned transient 503). Its media API yielded 190 records; 100 recent originals were downloaded privately and visually classified. The HTTP archive is not a full WordPress/database backup.
+No live WordPress, DNS, mail or domain cutover occurs. Real cPanel PHP/session/Apache/HTTPS and mailbox acceptance require staging access; private configuration, storage and retry cron must be set up using docs/cpanel-deployment.md. No secrets, original private photos or enquiry records are committed.
 
-20 competitor homepages were requested: 19 HTTP 200 and one challenge/403; two JavaScript shells need deeper rendered review. Homepage observations do not establish credentials, spending or conversion performance. Google Ads Transparency returned an application shell without advertiser evidence.
+## Audit and verification
 
-Migration/evidence/asset/competitor inventories, paused campaign packs, a Google Business Profile plan, social drafts and templates remain committed planning deliverables. Optional tracking is disabled. No advertising spend, social publication, account configuration, Google/Meta deployment or messages have occurred.
+The current read-only audit fetched 44 original-site URLs (44 HTTP 200) and 20 competitor homepages (19 HTTP 200, one 503). Individual measurements and limitations are in docs/live-audit-04-10-2026.csv and docs/website-audit-04-10-2026.md. Nine Drive audits and the connected Google Docs prompt were read; the original attachment remains unchanged.
 
-## Validation and launch boundaries
+48 browser checks and 24 unit/PHP checks pass. Build, HTML, metadata/links, banned-copy and lint gates pass. Representative mobile Lighthouse performance is 99–100, accessibility 100, best practices 96–100; deliberate beta noindex produces SEO 69. Complete final packaging, repository-base verification and release results are recorded in docs/qa-log.md and the publishing receipt.
 
-Required build, HTML, metadata/link/content, lint, unit/PHP and browser checks are recorded in docs/qa-log.md for this revision. Browser photo assertions cover every photographed route, all 16 portfolio images and fully decoded screenshots at six viewport sizes. The image pipeline test verifies reuse after deleting the private original. GitHub repository-prefix asset checks and mobile Lighthouse results are recorded separately; deliberate preview noindex explains the SEO warning.
-
-Production remains gated on confirmed contact/monitored email, business/legal review, data retention/providers and permissions. Before any later authorised cutover, take a private WordPress backup and verify restore; preserve MX/SPF/DKIM/DMARC. The cloud setup/start configuration targets cPanel packaging and PHP tests. Obsolete Cloudflare credential declarations are unused; the available configuration API cannot delete them.
-
-Completed releases must be committed, pushed to main and verified against git ls-remote. Local development servers and screenshots are verification evidence, not public deployment claims.
+Outstanding external items: Formspree endpoint/recipient receipt, Google identifiers and property verification, active WhatsApp account delivery, cPanel staging, source-photo public campaign permissions, business/legal/privacy review and later authorised production indexing. These do not prevent viewing the beta.

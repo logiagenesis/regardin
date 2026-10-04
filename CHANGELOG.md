@@ -1,3 +1,7 @@
+# 04/10/2026 — consolidated Liquid Glass beta
+
+Nine balanced services, six selected-work photos, complete portfolio rows, original-contact WhatsApp, sharing, optional Formspree, consent-gated GA4/GTM, Search Console token support, corrected schema/canonicals, live audit and concrete social launch artwork. Account activation remains pending.
+
 # 0.7 — Editorial construction redesign
 
 Replaced the rejected overlay/card-grid homepage with a clear split photographic opening, warm mineral tones, serif headings, a compact service index with keyboard/pointer photo previews, staggered selected work and natural-ratio portfolio images. Rebuilt the shared styles across every route, simplified service headings, shortened hero copy and moved the preview label into the footer. Retained the original logo, all source photographs, source-supported services and enquiry functionality. Updated the cPanel package and screenshot evidence.

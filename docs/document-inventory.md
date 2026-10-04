@@ -16,4 +16,4 @@ The shared Drive folder and its nested Audit folders were retrieved through thei
 | 02/GPT5.5Pro.txt    | Read in sections; large-output omitted middle sections retrieved separately  |
 | 02/Opus5.5.txt      | Read                                                                         |
 
-A Google Docs copy of the master prompt is also listed in the Prompt folder; its text export returned 403. The supplied attachment remains available and authoritative. No missing Google Docs export is claimed as read.
+The connected Google Docs copy of the master prompt was successfully retrieved and read on 04/10/2026: https://docs.google.com/document/d/1yN9X4mImHOZeeqnNuQ5IVXaNMGqYfMDYS8z-VyKomGU/edit . An earlier public text-export request returned 403; that limitation is now resolved through the connected Drive tool. The preserved attachment remains unchanged. The converted Docs text agrees with its Rev 2 scope and is retained privately in ignored research storage.

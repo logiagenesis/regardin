@@ -2,6 +2,8 @@
 
 A static, multi-page website for Regardin Construction in Cape Town. Built with HTML, hand-written CSS and progressive vanilla JavaScript, compiled by Vite. Target repository: `logiagenesis/REgardin_GPT`.
 
+This is the consolidated working project for `REgardin-Construction`, `REgardin_GPT` and the supplied Drive brief/audits. See [source reconciliation](docs/project-integration.md) for the imported tooling, retained implementation and source references. The earlier scaffold's command names remain available here. Use `nvm use` to select Node 24, then `npm run audit` for the complete local release checks.
+
 ## Develop
 
 Use Node 24 (minimum 22.12). PHP 8.2+ with PDO SQLite and fileinfo is used for cPanel enquiry tests. From this checkout:
@@ -44,3 +46,7 @@ Upload to an isolated staging document root; keep private files outside every pu
 ## GitHub Pages design preview
 
 The Pages source in the user screenshot is GitHub Actions. `.github/workflows/pages.yml` builds and deploys main at `https://logiagenesis.github.io/REgardin_GPT/`. The earlier Pages release deployed successfully; each subsequent push triggers a new deployment whose result is checked separately. The preview uses repository-prefixed links/fonts/assets and disables backend requests. GitHub Pages cannot execute PHP; call/email preparation remains available. The full enquiry service runs in the separate cPanel package.
+
+## Marketing integrations
+
+Optional Formspree, direct GA4/GTM and Search Console HTML verification accept public build identifiers. See [activation instructions](docs/marketing-activation.md) for exact variables and recipient/property verification. Defaults remain disconnected; call, email-brief and WhatsApp contact links work on the beta. `npm run social:export` produces six source-grounded review graphics. The [current audit](docs/website-audit-04-10-2026.md) records live findings, design decisions and test boundaries.

@@ -26,6 +26,7 @@ jobs:
       - run: npm run lint
       - run: npm run audit:html
       - run: npm run check
+      - run: npm run check:banned
       - run: npm run test:unit
       - run: npm test
       - run: echo "CHROME_PATH=$(node --input-type=module -e 'import {chromium} from "playwright"; console.log(chromium.executablePath())')" >> "$GITHUB_ENV"

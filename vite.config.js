@@ -1,6 +1,12 @@
-import { defineConfig } from 'vite';
+import { defineConfig, loadEnv } from 'vite';
 import { resolve } from 'node:path';
 import { routes, render } from './src/render.js';
+const localEnvironment = loadEnv(process.env.NODE_ENV || 'development', process.cwd(), '');
+for (const key of ['FORMSPREE_ENDPOINT', 'GOOGLE_SITE_VERIFICATION']) {
+  if (process.env[key] === undefined && localEnvironment[key] !== undefined) {
+    process.env[key] = localEnvironment[key];
+  }
+}
 const entries = Object.fromEntries(
   routes.map((r, i) => [
     'page' + i,

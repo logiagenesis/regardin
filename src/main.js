@@ -1,8 +1,15 @@
 import { initialiseTracking, trackEvent } from './tracking.js';
+import { initialiseFormspree } from './formspree.js';
 import tracking from './data/tracking.json' with { type: 'json' };
 import './styles.css';
 document.documentElement.classList.remove('no-js');
-initialiseTracking(tracking);
+initialiseTracking({
+  ...tracking,
+  approved: tracking.approved || import.meta.env.VITE_ANALYTICS_ENABLED === 'true',
+  gtmId: import.meta.env.VITE_GTM_ID || tracking.gtmId,
+  ga4Id: import.meta.env.VITE_GA4_ID || tracking.ga4Id,
+  mode: import.meta.env.VITE_MEASUREMENT_MODE || tracking.mode,
+});
 const menu = document.querySelector('.menu-toggle');
 const navigation = document.querySelector('#navigation');
 menu?.addEventListener('click', () => {
@@ -35,6 +42,10 @@ dialog?.addEventListener('click', (event) => {
 const form = document.querySelector('#enquiry-form');
 if (form) {
   const status = document.querySelector('#form-status');
+  const selectedService = new URLSearchParams(location.search).get('service');
+  if ([...form.elements.service.options].some((option) => option.value === selectedService)) {
+    form.elements.service.value = selectedService;
+  }
   form.elements.idempotencyKey.value ||= crypto.randomUUID();
   const brief = () => {
     const d = new FormData(form);
@@ -60,74 +71,76 @@ if (form) {
         'Clipboard access is unavailable. Use Prepare an email, or select and copy your details manually.';
     }
   });
-  let connected = false;
-  const configuration =
-    import.meta.env.VITE_STATIC_PREVIEW === 'true'
-      ? Promise.resolve(null)
-      : fetch('/api/enquiries', { headers: { Accept: 'application/json' } }).then((r) =>
-          r.ok ? r.json() : null,
-        );
-  configuration
-    .then((config) => {
-      if (!config?.enabled) return;
-      if (config.csrf) {
-        let csrf = form.querySelector('[name="csrf"]');
-        if (!csrf) {
-          csrf = document.createElement('input');
-          csrf.type = 'hidden';
-          csrf.name = 'csrf';
-          form.append(csrf);
+  if (!initialiseFormspree(form)) {
+    let connected = false;
+    const configuration =
+      import.meta.env.VITE_STATIC_PREVIEW === 'true'
+        ? Promise.resolve(null)
+        : fetch('/api/enquiries', { headers: { Accept: 'application/json' } }).then((r) =>
+            r.ok ? r.json() : null,
+          );
+    configuration
+      .then((config) => {
+        if (!config?.enabled) return;
+        if (config.csrf) {
+          let csrf = form.querySelector('[name="csrf"]');
+          if (!csrf) {
+            csrf = document.createElement('input');
+            csrf.type = 'hidden';
+            csrf.name = 'csrf';
+            form.append(csrf);
+          }
+          csrf.value = config.csrf;
         }
-        csrf.value = config.csrf;
+        connected = true;
+        document.querySelector('#submit-enquiry').hidden = false;
+        document.querySelector('#email-brief').className = 'text-link';
+        document.querySelector('#upload-field').hidden = false;
+        document.querySelector('.form-notice').innerHTML =
+          '<strong>Send your project enquiry.</strong><p>Your enquiry is stored securely before a receipt is shown. Up to five optional photographs or plans can be included.</p>';
+        if (!config.siteKey) return;
+        const script = document.createElement('script');
+        script.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit';
+        script.onload = () => {
+          window.turnstile.render('#turnstile-container', { sitekey: config.siteKey });
+        };
+        document.head.append(script);
+      })
+      .catch(() => {});
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      if (!connected) {
+        status.textContent =
+          'Online enquiries are not connected yet. Use Prepare an email or call Regardin.';
+        return;
       }
-      connected = true;
-      document.querySelector('#submit-enquiry').hidden = false;
-      document.querySelector('#email-brief').className = 'text-link';
-      document.querySelector('#upload-field').hidden = false;
-      document.querySelector('.form-notice').innerHTML =
-        '<strong>Send your project enquiry.</strong><p>Your enquiry is stored securely before a receipt is shown. Up to five optional photographs or plans can be included.</p>';
-      if (!config.siteKey) return;
-      const script = document.createElement('script');
-      script.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit';
-      script.onload = () => {
-        window.turnstile.render('#turnstile-container', { sitekey: config.siteKey });
-      };
-      document.head.append(script);
-    })
-    .catch(() => {});
-  form.addEventListener('submit', async (event) => {
-    event.preventDefault();
-    if (!connected) {
-      status.textContent =
-        'Online enquiries are not connected yet. Use Prepare an email or call Regardin.';
-      return;
-    }
-    const submit = document.querySelector('#submit-enquiry');
-    submit.disabled = true;
-    status.textContent = 'Sending your enquiry…';
-    try {
-      const response = await fetch(form.action, {
-        method: 'POST',
-        body: new FormData(form),
-        headers: { Accept: 'application/json' },
-      });
-      const result = await response.json();
-      if (!response.ok) throw new Error(result.error || 'The enquiry could not be saved.');
-      if (!result.duplicate) {
-        trackEvent('generate_lead', { service: form.elements.service.value });
-        if (result.uploadStatus === 'complete')
-          trackEvent('file_upload', { count: form.elements.photos.files.length });
+      const submit = document.querySelector('#submit-enquiry');
+      submit.disabled = true;
+      status.textContent = 'Sending your enquiry…';
+      try {
+        const response = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { Accept: 'application/json' },
+        });
+        const result = await response.json();
+        if (!response.ok) throw new Error(result.error || 'The enquiry could not be saved.');
+        if (!result.duplicate) {
+          trackEvent('generate_lead', { service: form.elements.service.value });
+          if (result.uploadStatus === 'complete')
+            trackEvent('file_upload', { count: form.elements.photos.files.length });
+        }
+        sessionStorage.setItem('regardin-receipt', result.receipt);
+        sessionStorage.setItem('regardin-upload-status', result.uploadStatus || 'none');
+        window.location.href = '/thank-you/';
+      } catch (error) {
+        status.textContent = error.message + ' Your entered details are still here.';
+        window.turnstile?.reset();
+      } finally {
+        submit.disabled = false;
       }
-      sessionStorage.setItem('regardin-receipt', result.receipt);
-      sessionStorage.setItem('regardin-upload-status', result.uploadStatus || 'none');
-      window.location.href = '/thank-you/';
-    } catch (error) {
-      status.textContent = error.message + ' Your entered details are still here.';
-      window.turnstile?.reset();
-    } finally {
-      submit.disabled = false;
-    }
-  });
+    });
+  }
 }
 const receiptStatus = document.querySelector('#receipt-status');
 if (receiptStatus) {
@@ -162,16 +175,20 @@ for (const comparison of document.querySelectorAll('[data-comparison]')) {
   );
 }
 
-const servicePreviews = document.querySelectorAll('[data-service-image]');
-for (const service of document.querySelectorAll('[data-service-photo]')) {
-  const show = () => {
-    for (const preview of servicePreviews) {
-      preview.hidden = preview.dataset.serviceImage !== service.dataset.servicePhoto;
+const shareButton = document.querySelector('[data-share-portfolio]');
+shareButton?.addEventListener('click', async () => {
+  const shareStatus = document.querySelector('#share-status');
+  const url = location.origin + location.pathname;
+  try {
+    if (navigator.share) {
+      await navigator.share({ title: 'Regardin Construction portfolio', url });
+      shareStatus.textContent = 'Portfolio shared.';
+    } else {
+      await navigator.clipboard.writeText(url);
+      shareStatus.textContent = 'Portfolio link copied. Share it with your project group.';
     }
-    for (const item of document.querySelectorAll('[data-service-photo]')) {
-      item.classList.toggle('is-active', item === service);
-    }
-  };
-  service.addEventListener('pointerenter', show);
-  service.addEventListener('focus', show);
-}
+  } catch (error) {
+    if (error.name !== 'AbortError')
+      shareStatus.textContent = 'Copy the page address from your browser to share this portfolio.';
+  }
+});

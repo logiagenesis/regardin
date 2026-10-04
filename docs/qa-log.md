@@ -79,3 +79,14 @@ Live preview, production deployment and delivered-mail verification are unrun; t
 - All 35 browser checks pass, including route accessibility, no-JavaScript content/navigation, menu keyboard behaviour, form brief handling, consent, photo decoding and the new keyboard/pointer service preview. All 21 unit/PHP/integration checks pass. Lint, 22-route build, metadata/internal-link/content checks and HTML validation pass.
 - Final mobile Lighthouse performance/accessibility/best practices/SEO: home 100/100/100/69; contact 100/100/96/69; renovations 100/100/100/69; construction gallery 99/100/100/69. CLS is 0.00033 on home and 0 on the other three. Preview SEO remains intentionally blocked by noindex. These scores verify technical behaviour, not aesthetic acceptance.
 - The cPanel ZIP has been rebuilt for root paths and its checksum is verified. Repository-prefixed Chromium checks pass for all 22 routes and 70 image/OG exports, with correct srcsets, no mobile overflow, zero axe violations and no page/HTTP errors. The resulting GitHub Pages deployment is checked independently after push. Actual cPanel staging/Apache/HTTPS/mail delivery remains pending host access.
+
+## Consolidated Liquid Glass beta — 04/10/2026
+
+- 48 browser checks pass, including all 24 routes, keyboard/no-JS behaviour, axe, loaded photographs, six-width complete-row geometry, exact original contact URLs, service preselection, query-free sharing, simulated Formspree acceptance/rejection and consent-gated direct GA4. No real enquiry or analytics event is sent.
+- 24 unit/PHP checks pass, including native PHP/SQLite receipt/storage paths, nine-service whitelist, visible FAQ schema, unique metadata and Formspree configuration.
+- First browser run identified the floating WhatsApp control outside a landmark and a Vite environment loader assigning the string undefined. Fixed the landmark and conditional assignment, restarted the server and reran all 48 successfully. Lint found three duplicate selectors; removed them and reran successfully.
+- Mobile Lighthouse: home 99/100/100/69; contact 100/100/96/69; renovations 99/100/100/69; construction gallery 100/100/100/69 (performance/accessibility/best practices/SEO). CLS is 0.00033 on home and zero on the other three. Beta noindex explains SEO warnings.
+- The live raw-document audit initially hit gzip decoding; enabled compressed response decoding and completed all 64 requests. Raw HTML results do not establish rendered UX, ranking or business credentials.
+- Six social PNG exports render at their declared dimensions with decoded source photographs and original contacts. No publication occurs.
+
+- Final cPanel rebuild and checksum, 24-route HTML/metadata/link/banned-copy gates and lint pass. Compiled repository-base Chromium verification checks all 24 routes and 70 responsive image/OG exports with zero axe violations, page errors or HTTP failures. Contact fallback is visible; no unconfigured online submission is offered.

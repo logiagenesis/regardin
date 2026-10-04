@@ -1,6 +1,6 @@
 # Social proposal — nothing scheduled or published
 
-Draft bio: “Regardin Construction · Building, renovation and finishing work · Kensington, Cape Town · Discuss your project through the website.” Profile image: approved logo only. Cover: an approved finished project photograph with readable name and minimal text. The proposed website wordmark is not an approved logo.
+Draft bio: “Regardin Construction · Building, renovation and finishing work · Kensington, Cape Town · Discuss your project through the website.” Profile image: approved logo only. Cover: an approved finished project photograph with readable name and minimal text. The source-site Regardin logo is restored; the supplied preview authorisation covers its use in this beta.
 
 All project, owner and testimonial posts below require permission and verified context. If assets are unapproved, use the practical enquiry post instead; do not substitute stock or AI houses. No location, timber species, date, duration or client identity inferred from photographs. Meta lead-ad proposal: approved project image + “Planning a change to your space? Share the location and work you have in mind.” → /contact/. No Meta account, Pixel, CAPI, audience or campaign is configured.
 
@@ -41,4 +41,4 @@ Use links after launch with ?utm_source=instagram (or facebook)&utm_medium=socia
 | 29  | Project reveal     | A closer look at the work. [Confirmed scope]                          | Approved photo and project context       |
 | 30  | Enquiry guidance   | Tell us the location, what you want to change and any plans you have. | Typographic guidance card                |
 
-Exportable templates are in social/templates. They deliberately contain obvious draft placeholders. Replace them only with approved material, then export at the specified pixel dimensions using Chromium screenshots. Review mobile crops and text legibility before publishing; no automatic posting or social messages have occurred.
+Six concrete source-photo/guidance artwork exports and launch captions are now in social/exports and social/launch-pack.md. Existing testimonial templates remain draft placeholders because no new testimonial publication permission is established. Review mobile crops and text legibility before publishing; no automatic posting or social messages have occurred.

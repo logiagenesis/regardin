@@ -136,7 +136,7 @@ Descriptions:
 
 ## Decking & pergolas
 
-Status: paused. Landing page: `/services/carpentry-decking-pergolas/`.
+Status: paused. Landing page: `/services/decking-pergolas/`.
 
 Ad groups: Decking & Pergolas project enquiries; separate specific work types after search-term and capacity review.
 
@@ -213,3 +213,7 @@ Concrete campaign: split concrete, screed and pool-plastering ad groups and use 
 Choose one primary accepted-enquiry conversion (GA4 import or native Ads), not both. Calls and WhatsApp clicks measure engagement, not qualified leads. Track enquiry → qualified → site visit → quote issued → accepted → completed in an approved operational system. Maximum cost per qualified lead = allowable acquisition cost per won job × qualified-lead win rate. Owner supplies both numbers; no financial assumptions made.
 
 Before activation: verified existing account invitation, approved service copy/photos, working form and mailbox, approved contact/legal text, actual consent/tag checks, billing/budget/location approval and owner sign-off. Enhanced conversions/Data Manager and remarketing remain blocked pending current official documentation and lawful processing review.
+
+## Updated service landing pages — 04/10/2026
+
+Decking/pergola enquiries now have their own `/services/decking-pergolas/` landing page. Fitted joinery remains at `/services/carpentry-decking-pergolas/` for URL continuity. Pool enquiries use `/services/pool-structures-finishes/`. Keep these separate from generic renovation keywords and confirm eligible scope before campaign activation. Accepted form submissions are proposed primary conversions; call/WhatsApp clicks remain secondary. Formspree/Google identifiers and real conversion receipt are still outstanding; see docs/marketing-activation.md.

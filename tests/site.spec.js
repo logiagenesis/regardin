@@ -172,17 +172,13 @@ test('source photographs load throughout the portfolio and service pages', async
   await expect(page.locator('main picture img')).toHaveCount(16);
 });
 
-test('service photography follows hover and keyboard focus without blocking navigation', async ({
-  page,
-}) => {
+test('nine service tiles are keyboard links with source photographs', async ({ page }) => {
   await page.goto('/');
-  const painting = page.locator('[data-service-photo="wall-painting"]');
-  await painting.focus();
-  await expect(page.locator('[data-service-image="wall-painting"]')).toBeVisible();
-  await expect(page.locator('[data-service-image="brickwork-on-site"]')).toBeHidden();
-  const timber = page.locator('[data-service-photo="decking-pergola"]');
-  await timber.hover();
-  await expect(page.locator('[data-service-image="decking-pergola"]')).toBeVisible();
-  await timber.click();
-  await expect(page).toHaveURL(/\/services\/carpentry-decking-pergolas\/$/);
+  const tiles = page.locator('.service-tiles-compact .construction-service');
+  await expect(tiles).toHaveCount(9);
+  const timber = page.getByRole('link', { name: /Decking & timber pergolas/ });
+  await timber.focus();
+  await expect(timber).toBeFocused();
+  await page.keyboard.press('Enter');
+  await expect(page).toHaveURL(/\/services\/decking-pergolas\/$/);
 });

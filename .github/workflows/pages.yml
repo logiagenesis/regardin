@@ -28,10 +28,17 @@ jobs:
           SITE_BASE: /REgardin_GPT/
           SITE_ORIGIN: https://logiagenesis.github.io
           VITE_STATIC_PREVIEW: 'true'
+          FORMSPREE_ENDPOINT: ${{ vars.FORMSPREE_ENDPOINT }}
+          GOOGLE_SITE_VERIFICATION: ${{ vars.GOOGLE_SITE_VERIFICATION }}
+          VITE_GA4_ID: ${{ vars.VITE_GA4_ID }}
+          VITE_GTM_ID: ${{ vars.VITE_GTM_ID }}
+          VITE_ANALYTICS_ENABLED: ${{ vars.VITE_ANALYTICS_ENABLED || 'false' }}
+          VITE_MEASUREMENT_MODE: ${{ vars.VITE_MEASUREMENT_MODE || 'preview' }}
       - run: npm run check
         env:
           SITE_BASE: /REgardin_GPT/
       - run: npm run audit:html
+      - run: npm run check:banned
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist

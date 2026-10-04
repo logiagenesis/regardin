@@ -1,0 +1,44 @@
+[
+  {
+    "file": "decking-pergolas-1080x1350.png",
+    "width": 1080,
+    "height": 1350,
+    "sourcePhoto": "decking-pergola",
+    "status": "Owner-review artwork; not published"
+  },
+  {
+    "file": "decking-pergolas-1080x1920.png",
+    "width": 1080,
+    "height": 1920,
+    "sourcePhoto": "decking-pergola",
+    "status": "Owner-review artwork; not published"
+  },
+  {
+    "file": "renovations-1080x1350.png",
+    "width": 1080,
+    "height": 1350,
+    "sourcePhoto": "interior-painting",
+    "status": "Owner-review artwork; not published"
+  },
+  {
+    "file": "renovations-1080x1920.png",
+    "width": 1080,
+    "height": 1920,
+    "sourcePhoto": "interior-painting",
+    "status": "Owner-review artwork; not published"
+  },
+  {
+    "file": "project-brief-1080x1350.png",
+    "width": 1080,
+    "height": 1350,
+    "sourcePhoto": null,
+    "status": "Owner-review artwork; not published"
+  },
+  {
+    "file": "project-brief-1080x1920.png",
+    "width": 1080,
+    "height": 1920,
+    "sourcePhoto": null,
+    "status": "Owner-review artwork; not published"
+  }
+]

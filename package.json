@@ -8,7 +8,7 @@
   },
   "scripts": {
     "dev": "vite --host 0.0.0.0",
-    "build": "node scripts/build.mjs",
+    "build": "node --env-file-if-exists=.env scripts/build.mjs",
     "build:production": "SITE_MODE=production npm run build",
     "preview": "vite preview --host 0.0.0.0",
     "test": "playwright test",
@@ -23,7 +23,14 @@
     "prebuild": "node scripts/fonts.mjs && npm run images",
     "contact-sheet": "node scripts/contact-sheet.mjs",
     "predev": "node scripts/fonts.mjs",
-    "package:cpanel": "node scripts/cpanel.mjs"
+    "package:cpanel": "node --env-file-if-exists=.env scripts/cpanel.mjs",
+    "check:banned": "node scripts/banned-content.js",
+    "check:links": "npm run check",
+    "validate:html": "npm run audit:html",
+    "test:e2e": "npm test",
+    "lighthouse": "npm run audit:lighthouse",
+    "audit": "npm run package:cpanel && npm run check && npm run check:banned && npm run lint && npm run audit:html && npm run test:unit && npm test && npm run audit:lighthouse",
+    "social:export": "node scripts/social-export.mjs"
   },
   "devDependencies": {
     "@axe-core/playwright": "4.13.0",

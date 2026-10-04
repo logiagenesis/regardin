@@ -4,6 +4,7 @@ import { build } from 'vite';
 import { routes, render } from '../src/render.js';
 import tracking from '../src/data/tracking.json' with { type: 'json' };
 import business from '../src/data/business.json' with { type: 'json' };
+import integrations from '../src/data/integrations.json' with { type: 'json' };
 const mode = process.env.SITE_MODE || 'preview';
 const base = process.env.SITE_BASE || '/';
 if (!/^\/(?:[A-Za-z0-9_-]+\/)*$/.test(base)) throw new Error('Invalid SITE_BASE.');
@@ -38,16 +39,20 @@ await writeFile(
   'dist/sitemap.xml',
   '<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' +
     routes
-      .filter((r) => !r.noindex && !['privacy', 'terms'].includes(r.kind))
+      .filter((r) => mode === 'production' && !r.noindex && !['privacy', 'terms'].includes(r.kind))
       .map((r) => `<url><loc>${business.url}${r.path}</loc></url>`)
       .join('') +
     '</urlset>',
 );
 const analytics =
-  mode === 'production' && tracking.approved && /^GTM-[A-Z0-9]+$/.test(tracking.gtmId || '');
+  (tracking.mode === 'production' || process.env.VITE_MEASUREMENT_MODE === 'production') &&
+  (tracking.approved || process.env.VITE_ANALYTICS_ENABLED === 'true') &&
+  (/^GTM-[A-Z0-9]+$/.test(process.env.VITE_GTM_ID || tracking.gtmId || '') ||
+    /^G-[A-Z0-9]+$/.test(process.env.VITE_GA4_ID || tracking.ga4Id || ''));
+const formspree = Boolean(process.env.FORMSPREE_ENDPOINT || integrations.formspreeEndpoint);
 await writeFile(
   'dist/_headers',
-  `/*\n  X-Content-Type-Options: nosniff\n  Referrer-Policy: strict-origin-when-cross-origin\n  Permissions-Policy: camera=(), microphone=(), geolocation=()\n  Content-Security-Policy: default-src 'self'; script-src 'self' https://challenges.cloudflare.com${analytics ? ' https://www.googletagmanager.com' : ''}; style-src 'self' 'unsafe-inline'; img-src 'self' data:${analytics ? ' https://www.google-analytics.com' : ''}; font-src 'self'; connect-src 'self'${analytics ? ' https://www.google-analytics.com https://region1.google-analytics.com https://www.googletagmanager.com' : ''}; frame-src https://challenges.cloudflare.com; form-action 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'\n${mode === 'production' ? '' : '  X-Robots-Tag: noindex, nofollow\n'}`,
+  `/*\n  X-Content-Type-Options: nosniff\n  Referrer-Policy: strict-origin-when-cross-origin\n  Permissions-Policy: camera=(), microphone=(), geolocation=()\n  Content-Security-Policy: default-src 'self'; script-src 'self' https://challenges.cloudflare.com${analytics ? ' https://www.googletagmanager.com' : ''}; style-src 'self' 'unsafe-inline'; img-src 'self' data:${analytics ? ' https://www.google-analytics.com' : ''}; font-src 'self'; connect-src 'self'${formspree ? ' https://formspree.io' : ''}${analytics ? ' https://www.google-analytics.com https://region1.google-analytics.com https://www.googletagmanager.com' : ''}; frame-src https://challenges.cloudflare.com; form-action 'self'${formspree ? ' https://formspree.io' : ''}; base-uri 'self'; object-src 'none'; frame-ancestors 'none'\n${mode === 'production' ? '' : '  X-Robots-Tag: noindex, nofollow\n'}`,
 );
 if (mode === 'production') {
   for (const r of routes) {
