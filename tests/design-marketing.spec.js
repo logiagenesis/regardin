@@ -19,9 +19,34 @@ for (const width of [360, 390, 768, 1024, 1440, 1920]) {
           }
           return { name: grid.className, rows };
         });
-        return { overflow: document.documentElement.scrollWidth - innerWidth, grids };
+        const photos = [...document.querySelectorAll('picture.photo-frame')].map((frame) => {
+          const image = frame.querySelector('img');
+          const box = frame.getBoundingClientRect();
+          const imageBox = image.getBoundingClientRect();
+          const style = getComputedStyle(frame);
+          const cropWidth = Number(style.getPropertyValue('--crop-width'));
+          const cropHeight = Number(style.getPropertyValue('--crop-height'));
+          const left = Number(style.getPropertyValue('--crop-center-x')) - cropWidth / 2;
+          const top = Number(style.getPropertyValue('--crop-center-y')) - cropHeight / 2;
+          return {
+            slug: frame.dataset.photo,
+            ratio: box.width / box.height,
+            gaps: [
+              imageBox.left + left * imageBox.width - box.left,
+              imageBox.top + top * imageBox.height - box.top,
+              box.right - (imageBox.left + (left + cropWidth) * imageBox.width),
+              box.bottom - (imageBox.top + (top + cropHeight) * imageBox.height),
+            ],
+          };
+        });
+        return { overflow: document.documentElement.scrollWidth - innerWidth, grids, photos };
       });
       expect(result.overflow, route.path).toBeLessThanOrEqual(0);
+      for (const photo of result.photos) {
+        expect(photo.ratio, `${route.path}: ${photo.slug}`).toBeCloseTo(4 / 3, 2);
+        for (const gap of photo.gaps)
+          expect(gap, `${route.path}: ${photo.slug} padded edge`).toBeLessThan(1);
+      }
       for (const grid of result.grids) {
         const count = grid.rows[0].boxes.length;
         for (const row of grid.rows) {

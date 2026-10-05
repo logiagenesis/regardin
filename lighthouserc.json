@@ -6,7 +6,8 @@
         "http://localhost/",
         "http://localhost/contact/",
         "http://localhost/services/renovations-alterations/",
-        "http://localhost/projects/project-preview/"
+        "http://localhost/projects/project-preview/",
+        "http://localhost/projects/"
       ],
       "numberOfRuns": 1,
       "settings": {

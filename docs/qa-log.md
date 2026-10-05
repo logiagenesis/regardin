@@ -90,3 +90,15 @@ Live preview, production deployment and delivered-mail verification are unrun; t
 - Six social PNG exports render at their declared dimensions with decoded source photographs and original contacts. No publication occurs.
 
 - Final cPanel rebuild and checksum, 24-route HTML/metadata/link/banned-copy gates and lint pass. Compiled repository-base Chromium verification checks all 24 routes and 70 responsive image/OG exports with zero axe violations, page errors or HTTP failures. Contact fallback is visible; no unconfigured online submission is offered.
+
+## Photo consistency correction — 05/10/2026
+
+- User screenshot exposed letterboxing and baked-in blurred borders despite equal card frames. Inspected all selected source images; ten exports contain padding. The old test verified boxes, not the photograph inside each box.
+- Shared no-JavaScript CSS crops exclude verified padding areas and use a consistent 4:3 frame on all photographed routes. Homepage services are nine text-only tiles; full service and portfolio photographs remain available. Source files are unchanged.
+- Strengthened the existing six-width, all-route browser check: each photograph frame must be 4:3 and its visible content rectangle must cover every frame edge. Existing complete-row, accessibility and contact regression checks remain.
+- Initial lint caught excessive numeric precision; changed the aspect ratio to exact CSS arithmetic. A second opening capture immediately after a full-page screenshot showed incomplete raster painting; checked the independently decoded opening and captured it before the full-page shot. This capture artefact is not presented as a published-page failure.
+
+- Final retest: all 48 browser checks and 24 unit/PHP checks pass; build, 24-route metadata/links, HTML, banned-content and lint gates pass. Loaded desktop/mobile home, service and portfolio screenshots inspected, alongside homepage captures at all six widths. No partial rows or uncovered photograph edges occur.
+- Mobile Lighthouse results (performance/accessibility/best practices/SEO): /services/renovations-alterations/ 100/100/100/69; /projects/ 100/100/100/69; / 91/100/96/69; /contact/ 99/100/96/69; /projects/project-preview/ 99/100/100/69. Preview noindex warnings remain deliberate.
+
+- Final repository-prefix check: all 24 compiled routes and 70 image/OG exports pass with zero axe violations, page errors or HTTP failures. cPanel archive checksum verifies. The ten-image generation brief uses consistent 2048 × 1536 PNG sizing and records generated-image provenance requirements.

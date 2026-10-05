@@ -172,7 +172,7 @@ test('source photographs load throughout the portfolio and service pages', async
   await expect(page.locator('main picture img')).toHaveCount(16);
 });
 
-test('nine service tiles are keyboard links with source photographs', async ({ page }) => {
+test('nine service tiles form a quiet keyboard-accessible index', async ({ page }) => {
   await page.goto('/');
   const tiles = page.locator('.service-tiles-compact .construction-service');
   await expect(tiles).toHaveCount(9);

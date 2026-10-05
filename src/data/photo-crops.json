@@ -1,0 +1,12 @@
+{
+  "interior-painting": [0, 0.127, 1, 0.746],
+  "boundary-wall": [0, 0.221, 1, 0.558],
+  "carpentry-kitchen": [0, 0.221, 1, 0.558],
+  "floor-screed": [0, 0.127, 1, 0.746],
+  "wall-painting": [0.221, 0, 0.558, 1],
+  "pool-concrete": [0.127, 0, 0.746, 1],
+  "concrete-stairs": [0.127, 0, 0.746, 1],
+  "decking-detail": [0.127, 0, 0.746, 1],
+  "masonry-detail": [0.102, 0, 0.796, 1],
+  "cupboard-carpentry": [0.127, 0, 0.746, 1]
+}

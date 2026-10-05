@@ -50,3 +50,5 @@ The Pages source in the user screenshot is GitHub Actions. `.github/workflows/pa
 ## Marketing integrations
 
 Optional Formspree, direct GA4/GTM and Search Console HTML verification accept public build identifiers. See [activation instructions](docs/marketing-activation.md) for exact variables and recipient/property verification. Defaults remain disconnected; call, email-brief and WhatsApp contact links work on the beta. `npm run social:export` produces six source-grounded review graphics. The [current audit](docs/website-audit-04-10-2026.md) records live findings, design decisions and test boundaries.
+
+For the requested coordinated 2K image batch, use [the exact image specification and prompts](docs/IMAGE_GENERATION_BRIEF.md).

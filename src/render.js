@@ -7,6 +7,7 @@ import integrations from './data/integrations.json' with { type: 'json' };
 
 import projects from './data/projects.json' with { type: 'json' };
 import images from './data/generated-images.json' with { type: 'json' };
+import photoCrops from './data/photo-crops.json' with { type: 'json' };
 
 export const escape = (value) =>
   String(value).replace(
@@ -205,7 +206,7 @@ const servicePhotos = {
   'custom-projects': 'custom-braai',
 };
 const serviceTiles = (compact = false) =>
-  `<div class="construction-services${compact ? ' service-tiles-compact' : ''}" data-balanced-grid>${services.map((service, i) => `<a class="construction-service" href="/services/${service.slug}/">${picture(servicePhotos[service.slug])}<div><span class="tile-number" aria-hidden="true">0${i + 1}</span><h3>${escape(service.title)}</h3>${compact ? '' : `<p>${escape(service.short)}</p>`}<span class="service-more">Explore the work ${arrow}</span></div></a>`).join('')}</div>`;
+  `<div class="construction-services${compact ? ' service-tiles-compact' : ''}" data-balanced-grid>${services.map((service, i) => `<a class="construction-service" href="/services/${service.slug}/">${compact ? '' : picture(servicePhotos[service.slug])}<div><span class="tile-number" aria-hidden="true">0${i + 1}</span><h3>${escape(service.title)}</h3>${compact ? '' : `<p>${escape(service.short)}</p>`}<span class="service-more">Explore the work ${arrow}</span></div></a>`).join('')}</div>`;
 const portfolioPhotos = [
   'decking-pergola',
   'brickwork-on-site',
@@ -237,7 +238,10 @@ export function picture(slug, { hero = false, className = '' } = {}) {
   const avif = image.variants.filter((v) => v.format === 'avif');
   const fallback = webp.at(-1);
   const sizes = hero ? '(max-width: 800px) 100vw, 50vw' : '(max-width: 600px) 100vw, 33vw';
-  return `<picture class="${escape(className)}"><source type="image/avif" srcset="${avif.map((v) => `${v.url} ${v.width}w`).join(', ')}" sizes="${sizes}"><img src="${fallback.url}" srcset="${webp.map((v) => `${v.url} ${v.width}w`).join(', ')}" sizes="${sizes}" width="${fallback.width}" height="${fallback.height}" alt="${escape(image.alt)}" loading="${hero ? 'eager' : 'lazy'}" ${hero ? 'fetchpriority="high"' : ''} decoding="async"></picture>`;
+  const [left, top, width, height] = photoCrops[slug] || [0, 0, 1, 1];
+  const cropAspect = (fallback.width * width) / (fallback.height * height);
+  const cropStyle = `--crop-width:${width};--crop-height:${height};--crop-center-x:${left + width / 2};--crop-center-y:${top + height / 2};--crop-aspect:${cropAspect}`;
+  return `<picture class="photo-frame ${escape(className)}" data-photo="${slug}" style="${cropStyle}"><source type="image/avif" srcset="${avif.map((v) => `${v.url} ${v.width}w`).join(', ')}" sizes="${sizes}"><img class="photo-image" src="${fallback.url}" srcset="${webp.map((v) => `${v.url} ${v.width}w`).join(', ')}" sizes="${sizes}" width="${fallback.width}" height="${fallback.height}" alt="${escape(image.alt)}" loading="${hero ? 'eager' : 'lazy'}" ${hero ? 'fetchpriority="high"' : ''} decoding="async"></picture>`;
 }
 export function comparison(project) {
   if (!images[project.before] || !images[project.after]) return '';

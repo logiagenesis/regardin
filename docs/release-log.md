@@ -24,3 +24,7 @@ Rebuilt the entire visual system with warm mineral tones, charcoal, Bodoni Moda 
 ## Consolidated Liquid Glass beta — 04/10/2026
 
 Integrated the supplied scaffold tooling into REgardin_GPT on main and reconciled the Drive prompt/audits. Rebuilt services as nine complete source-grounded tiles, selected work as six balanced photographs and portfolio as complete rows. Added original-contact WhatsApp, portfolio sharing, optional Formspree, consent-gated direct GA4/GTM and Search Console token support. Included the 64-URL live audit, updated cPanel ZIP, loaded screenshots and six social artwork exports. Local validation: 48 browser and 24 unit/PHP checks, 24-route build/HTML/link/banned-copy/lint gates, complete-row checks at six widths, repository-prefixed verification and mobile Lighthouse performance 99–100/accessibility 100. Real account activation and cPanel acceptance remain outstanding. Commit identity, remote SHA, Actions and public-beta status are checked and reported separately after push.
+
+## Photograph consistency correction — 05/10/2026
+
+Source-verified CSS crops remove letterboxing and baked-in blurred margins across hero, service and gallery photos. One 4:3 frame system and a quieter text-only nine-service homepage index address the user's visual rejection. Original image files and contacts remain unchanged. Complete-row and new crop-coverage checks are included; release verification is reported after push to main.

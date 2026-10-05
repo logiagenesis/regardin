@@ -1,3 +1,7 @@
+# 05/10/2026 — consistent photograph presentation
+
+Replaced letterboxed portfolio images with one edge-to-edge 4:3 crop system across the site. Explicit source rectangles exclude existing blurred padding without changing image files. Simplified homepage services to nine text-only tiles and strengthened six-width tests to check visible photo coverage, alongside complete rows.
+
 # 04/10/2026 — consolidated Liquid Glass beta
 
 Nine balanced services, six selected-work photos, complete portfolio rows, original-contact WhatsApp, sharing, optional Formspree, consent-gated GA4/GTM, Search Console token support, corrected schema/canonicals, live audit and concrete social launch artwork. Account activation remains pending.
