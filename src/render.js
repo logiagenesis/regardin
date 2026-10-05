@@ -258,8 +258,8 @@ function home() {
     ['interior-painting', 'A fresh interior', 'Painted walls and a finished living space.'],
     ['brickwork-on-site', 'Building & brickwork', 'A building extension taking shape.'],
     ['carpentry-kitchen', 'The finishing details', 'Timber surfaces and fitted cabinetry.'],
-    ['pool-work', 'Pool surfaces', 'Pool plastering and surface finishing.'],
-    ['boundary-wall', 'Walls & boundaries', 'Masonry and the shape of an outdoor space.'],
+    ['custom-braai', 'Built-in braai', 'A built-in braai with a masonry surround.'],
+    ['building-exterior', 'Building outdoors', 'Building work taking shape beside the garden.'],
   ];
   return `<section class="editorial-hero wrap"><div class="editorial-hero-copy"><p class="eyebrow">CONSTRUCTION &amp; RENOVATIONS · CAPE TOWN</p><h1>Build. Renovate.<br><em>Make it yours.</em><span class="visually-hidden"> Construction in Cape Town.</span></h1><p class="hero-description">${escape(h.heroBody)}</p><div class="hero-actions">${link('/contact/', 'Discuss your project', 'button')}${link('/projects/', 'Explore our work')}</div><p class="hero-location">Based in Kensington. Building in Cape Town.</p></div><figure class="hero-frame">${picture('illustration-hero-outdoor-living', { hero: true })}<figcaption class="glass-panel"><span>AI-generated design illustration</span><a href="/services/" aria-label="Explore construction services">Services ${arrow}</a></figcaption></figure></section>
   <div class="scope-strip wrap" data-balanced-grid><span>Residential &amp; commercial</span><span>Building &amp; renovations</span><span>Timber, concrete &amp; finishes</span></div>

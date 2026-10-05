@@ -47,3 +47,7 @@ Updated Git origin and current documentation for logiagenesis/regardin. Pages no
 # 0.11 — Full interaction audit
 
 Added desktop/mobile interaction regression checks covering every visible link, quote navigation, FAQ/privacy controls, email preparation, sharing, clipboard refusal and consent buttons. Recorded the 1,034-click published-beta audit and external account limits. No application defect was found.
+
+# 0.12 — Sharper homepage photo selections
+
+Replaced the two user-flagged pool/boundary homepage thumbnails with higher-resolution braai/exterior project photographs. Updated captions and loaded screenshots, retained six balanced cards, and checked high-density display image selection.

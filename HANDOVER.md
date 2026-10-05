@@ -45,3 +45,7 @@ The user renamed the existing repository to logiagenesis/regardin. Git origin no
 ## Full control verification — 05/10/2026
 
 The user's request to test every button is recorded in docs/functional-audit-05-10-2026.md. Live desktop/mobile verification covers 1,034 rendered link clicks and all 29 distinct navigation destinations at both widths, menus, FAQ panels, privacy dialogs, contact validation, brief copying and portfolio sharing. Added persistent interaction tests for these controls plus email composition and permission failures. The expanded browser checks (55 full-suite plus one targeted), 25 unit/PHP checks and required build/HTML/link/lint gates pass. No application or styling fix was needed. Live form delivery and Google accounts remain unconfigured as described above; tests do not claim message or mailbox receipt.
+
+## Flagged homepage photos — 05/10/2026
+
+Browser comments marked selected-work cards five and six as poor quality. Replaced pool-work and boundary-wall homepage selections with custom-braai and building-exterior, updating headings/captions to describe those genuine source-site photos. Sources are 1440 × 1800 and 1206 × 898, respectively. Both select 800-pixel AVIF at the user's 968-pixel viewport with device scale factor 2. The six-card grid still has two complete desktop rows of three. Loaded 968/mobile/desktop captures were visually reviewed; updated screenshots and cPanel package/checksum accompany the release. QA results are recorded in docs/qa-log.md.
