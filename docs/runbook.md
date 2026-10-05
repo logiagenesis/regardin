@@ -12,4 +12,4 @@ Online enquiry readiness needs PHP sessions, PDO SQLite, fileinfo, writable priv
 
 Production approvals remain separate. Resolve contact/photo/brand/legal confirmations, take an authorised WordPress backup and test restoration, review backlinks/retired URLs, verify the production build and Apache indexing/security configuration, then perform only an explicitly approved cutover. No deployment or cutover has occurred.
 
-For the GitHub preview, build with SITE_BASE=/REgardin_GPT/ and VITE_STATIC_PREVIEW=true; check with the same SITE_BASE. The Pages workflow uploads dist and deploys with the GitHub environment. cPanel packaging always uses the root base and PHP-capable configuration. Public deployment must be verified through the workflow/host rather than inferred from git push.
+For the GitHub preview, build with SITE_BASE=/regardin/ and VITE_STATIC_PREVIEW=true; check with the same SITE_BASE. The Pages workflow uploads dist and deploys with the GitHub environment. cPanel packaging always uses the root base and PHP-capable configuration. Public deployment must be verified through the workflow/host rather than inferred from git push.

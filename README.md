@@ -1,6 +1,6 @@
 # Regardin Construction
 
-A static, multi-page website for Regardin Construction in Cape Town. Built with HTML, hand-written CSS and progressive vanilla JavaScript, compiled by Vite. Target repository: `logiagenesis/REgardin_GPT`.
+A static, multi-page website for Regardin Construction in Cape Town. Built with HTML, hand-written CSS and progressive vanilla JavaScript, compiled by Vite. Target repository: `logiagenesis/regardin`.
 
 This is the consolidated working project for `REgardin-Construction`, `REgardin_GPT` and the supplied Drive brief/audits. See [source reconciliation](docs/project-integration.md) for the imported tooling, retained implementation and source references. The earlier scaffold's command names remain available here. Use `nvm use` to select Node 24, then `npm run audit` for the complete local release checks.
 
@@ -39,13 +39,13 @@ The site uses 16 construction photographs and the original logo from the archive
 
 **cPanel is the user-confirmed target.** It overrides the Cloudflare default in the attached document. Run `npm run package:cpanel` and use [the deployment guide](docs/cpanel-deployment.md). The archive and checksum are committed under `releases/`.
 
-The site runs as static HTML/CSS/JS on the host, with PHP for session-verified enquiries, private SQLite storage/uploads and queued local-mail notifications. Node is not needed on cPanel. PHP extension/account configuration and actual mailbox delivery remain unverified. The static preview is https://logiagenesis.github.io/REgardin_GPT/. cPanel staging upload remains pending host access.
+The site runs as static HTML/CSS/JS on the host, with PHP for session-verified enquiries, private SQLite storage/uploads and queued local-mail notifications. Node is not needed on cPanel. PHP extension/account configuration and actual mailbox delivery remain unverified. The static preview is https://logiagenesis.github.io/regardin/. cPanel staging upload remains pending host access.
 
 Upload to an isolated staging document root; keep private files outside every public root. The package stays noindex. Do not replace live WordPress or alter DNS/mail records. GitHub Actions runs QA and deploys a static design preview to GitHub Pages. cPanel remains the full PHP site target; Cloudflare is not required. Earlier Functions/Worker code remains historical source and is excluded from the cPanel package.
 
 ## GitHub Pages design preview
 
-The Pages source in the user screenshot is GitHub Actions. `.github/workflows/pages.yml` builds and deploys main at `https://logiagenesis.github.io/REgardin_GPT/`. The earlier Pages release deployed successfully; each subsequent push triggers a new deployment whose result is checked separately. The preview uses repository-prefixed links/fonts/assets and disables backend requests. GitHub Pages cannot execute PHP; call/email preparation remains available. The full enquiry service runs in the separate cPanel package.
+The Pages source in the user screenshot is GitHub Actions. `.github/workflows/pages.yml` builds and deploys main at `https://logiagenesis.github.io/regardin/`. The earlier Pages release deployed successfully; each subsequent push triggers a new deployment whose result is checked separately. The preview uses repository-prefixed links/fonts/assets and disables backend requests. GitHub Pages cannot execute PHP; call/email preparation remains available. The full enquiry service runs in the separate cPanel package.
 
 ## Marketing integrations
 

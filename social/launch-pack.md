@@ -8,6 +8,6 @@ Six review-ready PNGs are exported at 1080×1350 and 1080×1920 in `exports/`. R
 | renovations | Planning changes to your home or business in Cape Town? Tell Regardin what you want to change and share any plans or photographs. | /services/renovations-alterations/ |
 | project-brief | A useful project brief starts with three things: your location, the work you want to do, and any plans or photographs. Call +27 79 454 9780 or prepare your enquiry on the website. | /contact/ |
 
-Beta review link: https://logiagenesis.github.io/REgardin_GPT/ . Replace this with the approved production origin for a public launch. Social share metadata uses a 1200×630 source photograph. Portfolio sharing offers native share/copy and WhatsApp; it excludes page query values.
+Beta review link: https://logiagenesis.github.io/regardin/ . Replace this with the approved production origin for a public launch. Social share metadata uses a 1200×630 source photograph. Portfolio sharing offers native share/copy and WhatsApp; it excludes page query values.
 
 Suggested local-group post, subject to group rules: “Planning building, renovation or finishing work in Cape Town? Regardin Construction covers brickwork, painting, timber, concrete and related work. Explore the service details and share your location and project scope: [approved website link]. Call +27 79 454 9780.” Include one permitted relevant photograph, avoid repeated unsolicited promotion, and publish only through an authorised account.

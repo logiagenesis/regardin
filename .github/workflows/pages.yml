@@ -25,7 +25,7 @@ jobs:
       - run: npm run build
         env:
           SITE_MODE: preview
-          SITE_BASE: /REgardin_GPT/
+          SITE_BASE: /${{ github.event.repository.name }}/
           SITE_ORIGIN: https://logiagenesis.github.io
           VITE_STATIC_PREVIEW: 'true'
           FORMSPREE_ENDPOINT: ${{ vars.FORMSPREE_ENDPOINT }}
@@ -36,7 +36,7 @@ jobs:
           VITE_MEASUREMENT_MODE: ${{ vars.VITE_MEASUREMENT_MODE || 'preview' }}
       - run: npm run check
         env:
-          SITE_BASE: /REgardin_GPT/
+          SITE_BASE: /${{ github.event.repository.name }}/
       - run: npm run audit:html
       - run: npm run check:banned
       - uses: actions/upload-pages-artifact@v3

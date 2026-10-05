@@ -1,6 +1,6 @@
 # Audit reconciliation — 01/10/2026
 
-The attached Rev 2 master prompt governs this build; earlier audit prompts conflict on repository, stack, branch and claims. The user confirmed `REgardin_GPT`. The implementation uses Vite/static HTML/CSS/vanilla JS and main as a preview branch, as required by the latest brief.
+The attached Rev 2 master prompt governs this build; earlier audit prompts conflict on repository, stack, branch and claims. The user confirmed `REgardin_GPT`, subsequently renamed to `regardin`. The implementation uses Vite/static HTML/CSS/vanilla JS and main as a preview branch, as required by the latest brief.
 
 | Prior finding                                                    | Current evidence                                                                                      | Decision                                                                   |
 | ---------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------- |

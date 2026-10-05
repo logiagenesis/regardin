@@ -2,7 +2,7 @@
 
 Use this existing checkout. Cloud tasks are already isolated; do not create a worktree unless the user requests one.
 
-Follow MASTER_PROMPT.md, with logiagenesis/REgardin_GPT as the user-confirmed repository. Keep missing facts in the confirmation register and do not invent projects, reviews, credentials or account completion.
+Follow MASTER_PROMPT.md, with logiagenesis/regardin as the user-confirmed repository. Keep missing facts in the confirmation register and do not invent projects, reviews, credentials or account completion.
 
 Complete useful work autonomously. Do not repeatedly pause for routine decisions or ask answered questions. Push completed, audited work to main and verify the remote SHA. Never claim a local server is a public preview.
 

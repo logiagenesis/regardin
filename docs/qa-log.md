@@ -112,3 +112,9 @@ Live preview, production deployment and delivered-mail verification are unrun; t
 - The initial 2048-pixel hero WebP exceeded the 200 KB budget. Retained a 2048 AVIF and capped the WebP fallback at 1600; all final hero variants meet the budget. Source PNG quality remains unchanged. cPanel ZIP rebuilt and checksum verified.
 - Public account activation and real recipient delivery remain outstanding as documented in HANDOVER.md. Repository-prefixed and published-beta verification are checked separately before the final publishing receipt.
 - GitHub Pages build verification passed for all 24 repository-prefixed routes and all 179 image/OG files, with correct responsive srcsets, zero axe violations, page errors or HTTP failures.
+
+## Repository URL change — 05/10/2026
+
+The user renamed the existing repository to logiagenesis/regardin. Updated Git origin and current beta documentation. Pages build/check now derive SITE_BASE from the repository name rather than the old hard-coded path. The /regardin/ build passes 24-route metadata/link, HTML, banned-copy and lint gates; all 49 browser checks and 25 unit/PHP checks pass. Homepage canonical/social URLs use the new address with no obsolete path. The first local prefix verification used a preview server with the root base; corrected the server base before rerunning. Published deployment and remote commit verification are reported in the push receipt.
+
+The corrected /regardin/ preview passes all 24 repository-prefixed routes and 179 image/OG asset requests, with zero axe violations, page errors or HTTP failures.

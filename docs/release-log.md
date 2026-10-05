@@ -32,3 +32,7 @@ Source-verified CSS crops remove letterboxing and baked-in blurred margins acros
 ## User-supplied illustration release — 05/10/2026
 
 Ten supplied high-resolution images are integrated as labelled hero/service illustrations with consistent 4:3 frames. The nine-service text index and actual-work portfolio remain intact. Includes responsive AVIF/WebP, updated social previews, provenance manifest, loaded desktop/mobile screenshots and refreshed cPanel ZIP/checksum. Local release gates pass: 49 browser checks, 25 unit/PHP checks, 24-route build/link/HTML/banned-copy/lint validation and five-route Lighthouse performance 96–100/accessibility 100. Push and live deployment verification are reported separately in the publishing receipt.
+
+## Renamed repository and beta — 05/10/2026
+
+Existing history/main now publishes from logiagenesis/regardin to https://logiagenesis.github.io/regardin/. Removed hard-coded repository base from Pages build/check and updated current operating links. No live domain or cPanel cutover occurs. Required build/link/HTML/lint/banned-copy checks, 49 browser checks and 25 unit/PHP checks pass; publication is verified separately after push.

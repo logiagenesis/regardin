@@ -1,6 +1,6 @@
 # Consolidated project
 
-REgardin_GPT is the single working repository and `main` is the publishing branch. The user supplied both repositories and instructed us to combine them. The fuller application is retained here; neither repository history is rewritten.
+regardin (formerly REgardin_GPT) is the single working repository and `main` is the publishing branch. The user supplied both repositories and instructed us to combine them. The fuller application is retained here; neither repository history is rewritten.
 
 ## Reconciliation
 

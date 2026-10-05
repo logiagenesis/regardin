@@ -39,3 +39,7 @@ Add Cloudflare enquiry storage, private uploads, verification, idempotency, rate
 # 0.9 — Supplied high-resolution illustrations
 
 Integrated the user’s ten generated images: one hero and nine matching service illustrations. Kept consistent 4:3 frames and complete rows, exported responsive AVIF/WebP and social previews, and labelled illustrative imagery separately from the original portfolio. Added a provenance regression test and retained actual work photographs.
+
+# 0.10 — Renamed beta repository
+
+Updated Git origin and current documentation for logiagenesis/regardin. Pages now derives the build/check base from the repository name, publishing the beta at /regardin/ with matching links, assets, canonicals and social-image URLs.

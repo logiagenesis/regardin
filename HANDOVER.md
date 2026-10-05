@@ -1,6 +1,6 @@
 # Handover — 05/10/2026
 
-The consolidated project is REgardin_GPT, on main. Both supplied repositories and Drive documents are reconciled in docs/project-integration.md. The source scaffold's Node pin, banned-copy checker and command aliases are integrated into the fuller application without rewriting repository history.
+The consolidated project is regardin, on main. Both supplied repositories and Drive documents are reconciled in docs/project-integration.md. The source scaffold's Node pin, banned-copy checker and command aliases are integrated into the fuller application without rewriting repository history.
 
 ## Website and design
 
@@ -16,7 +16,7 @@ Consent-gated direct GA4 or GTM and Search Console HTML verification configurati
 
 ## Hosting
 
-Shareable beta: https://logiagenesis.github.io/REgardin_GPT/ . Pushes to main trigger GitHub Pages. The current remote SHA and workflow/public checks are reported after publishing; an earlier deployed beta was reachable during this audit. Full production hosting remains user-confirmed cPanel. releases/regardin-cpanel-preview.zip and its checksum package root-path static pages, Apache configuration and the private PHP/SQLite enquiry backend. When Formspree is configured, it takes precedence for contact submission.
+Shareable beta: https://logiagenesis.github.io/regardin/ . Pushes to main trigger GitHub Pages. The current remote SHA and workflow/public checks are reported after publishing; an earlier deployed beta was reachable during this audit. Full production hosting remains user-confirmed cPanel. releases/regardin-cpanel-preview.zip and its checksum package root-path static pages, Apache configuration and the private PHP/SQLite enquiry backend. When Formspree is configured, it takes precedence for contact submission.
 
 No live WordPress, DNS, mail or domain cutover occurs. Real cPanel PHP/session/Apache/HTTPS and mailbox acceptance require staging access; private configuration, storage and retry cron must be set up using docs/cpanel-deployment.md. No secrets, original private photos or enquiry records are committed.
 
@@ -37,3 +37,7 @@ The requested one-batch image specification is in docs/IMAGE_GENERATION_BRIEF.md
 ## Supplied illustration batch — 05/10/2026
 
 All ten supplied Drive PNGs have been received and visually reviewed: one hero and nine service illustrations, each 2400 × 1792. The homepage hero, service hub and individual service lead images use this batch in uniform 4:3 frames. Visible labels and alt text identify generated illustrations; the original 16 portfolio photographs and six homepage work photographs remain actual source-site evidence. The homepage retains its nine text service tiles. Responsive AVIF/WebP derivatives include 2048-pixel versions, with hero variants constrained to 200 KB. Source filenames, dimensions, Drive provenance and SHA-256 checksums are recorded in docs/illustration-manifest.csv; source PNGs remain in the private raw archive.
+
+## Repository rename — 05/10/2026
+
+The user renamed the existing repository to logiagenesis/regardin. Git origin now uses https://github.com/logiagenesis/regardin.git, and the beta URL is https://logiagenesis.github.io/regardin/. The Pages build/check base is derived from the GitHub repository name so future renames do not retain obsolete asset paths. Repository history and main remain intact. Current client-facing links and build instructions use the new address; historical source references retain their original names.

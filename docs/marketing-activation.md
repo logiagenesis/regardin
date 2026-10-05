@@ -1,6 +1,6 @@
 # Marketing activation and account handover
 
-Beta: https://logiagenesis.github.io/REgardin_GPT/ . Production remains the separately approved cPanel deployment. The beta is deliberately noindex; do not run paid traffic to an unfinished beta.
+Beta: https://logiagenesis.github.io/regardin/ . Production remains the separately approved cPanel deployment. The beta is deliberately noindex; do not run paid traffic to an unfinished beta.
 
 ## Formspree
 
