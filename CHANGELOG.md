@@ -43,3 +43,7 @@ Integrated the user’s ten generated images: one hero and nine matching service
 # 0.10 — Renamed beta repository
 
 Updated Git origin and current documentation for logiagenesis/regardin. Pages now derives the build/check base from the repository name, publishing the beta at /regardin/ with matching links, assets, canonicals and social-image URLs.
+
+# 0.11 — Full interaction audit
+
+Added desktop/mobile interaction regression checks covering every visible link, quote navigation, FAQ/privacy controls, email preparation, sharing, clipboard refusal and consent buttons. Recorded the 1,034-click published-beta audit and external account limits. No application defect was found.

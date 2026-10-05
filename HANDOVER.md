@@ -41,3 +41,7 @@ All ten supplied Drive PNGs have been received and visually reviewed: one hero a
 ## Repository rename — 05/10/2026
 
 The user renamed the existing repository to logiagenesis/regardin. Git origin now uses https://github.com/logiagenesis/regardin.git, and the beta URL is https://logiagenesis.github.io/regardin/. The Pages build/check base is derived from the GitHub repository name so future renames do not retain obsolete asset paths. Repository history and main remain intact. Current client-facing links and build instructions use the new address; historical source references retain their original names.
+
+## Full control verification — 05/10/2026
+
+The user's request to test every button is recorded in docs/functional-audit-05-10-2026.md. Live desktop/mobile verification covers 1,034 rendered link clicks and all 29 distinct navigation destinations at both widths, menus, FAQ panels, privacy dialogs, contact validation, brief copying and portfolio sharing. Added persistent interaction tests for these controls plus email composition and permission failures. The expanded browser checks (55 full-suite plus one targeted), 25 unit/PHP checks and required build/HTML/link/lint gates pass. No application or styling fix was needed. Live form delivery and Google accounts remain unconfigured as described above; tests do not claim message or mailbox receipt.
