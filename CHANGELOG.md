@@ -35,3 +35,7 @@ Initial 21-route design preview, seven service pages, contact brief preparation,
 ## 0.2.0 — 01/10/2026
 
 Add Cloudflare enquiry storage, private uploads, verification, idempotency, rate limits and a retryable notification outbox. Thirteen SQL/API tests pass; external credentials and mailbox delivery remain blocked. Add persistent collaboration preferences in AGENTS.md. Recover live-site and shared-Drive access and begin the source archive.
+
+# 0.9 — Supplied high-resolution illustrations
+
+Integrated the user’s ten generated images: one hero and nine matching service illustrations. Kept consistent 4:3 frames and complete rows, exported responsive AVIF/WebP and social previews, and labelled illustrative imagery separately from the original portfolio. Added a provenance regression test and retained actual work photographs.

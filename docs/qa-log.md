@@ -102,3 +102,13 @@ Live preview, production deployment and delivered-mail verification are unrun; t
 - Mobile Lighthouse results (performance/accessibility/best practices/SEO): /services/renovations-alterations/ 100/100/100/69; /projects/ 100/100/100/69; / 91/100/96/69; /contact/ 99/100/96/69; /projects/project-preview/ 99/100/100/69. Preview noindex warnings remain deliberate.
 
 - Final repository-prefix check: all 24 compiled routes and 70 image/OG exports pass with zero axe violations, page errors or HTTP failures. cPanel archive checksum verifies. The ten-image generation brief uses consistent 2048 × 1536 PNG sizing and records generated-image provenance requirements.
+
+## Supplied image batch — 05/10/2026
+
+- Received and visually inspected all ten supplied PNGs, each 2400 × 1792. Recorded canonical Drive provenance, descriptive filenames and SHA-256 hashes. No filler borders or embedded text appear in this batch.
+- Integrated one labelled hero illustration and nine matching service illustrations. Actual portfolio photographs remain separate. Added rendered-page and browser provenance checks.
+- All 49 browser checks and 25 unit/PHP checks pass. All 24 routes have complete rows and no horizontal overflow at 360, 390, 768, 1024, 1440 and 1920 pixels. Loaded desktop/mobile opening and service screenshots inspected and updated.
+- Build, metadata/links, HTML, banned-copy and lint gates pass. Five-route mobile Lighthouse scores (performance/accessibility/best practices/SEO): home 99/100/96/69, contact 99/100/96/69, renovations 96/100/100/69, project preview 98/100/100/69, portfolio 100/100/100/69. SEO 69 reflects deliberate beta noindex, not production indexing verification.
+- The initial 2048-pixel hero WebP exceeded the 200 KB budget. Retained a 2048 AVIF and capped the WebP fallback at 1600; all final hero variants meet the budget. Source PNG quality remains unchanged. cPanel ZIP rebuilt and checksum verified.
+- Public account activation and real recipient delivery remain outstanding as documented in HANDOVER.md. Repository-prefixed and published-beta verification are checked separately before the final publishing receipt.
+- GitHub Pages build verification passed for all 24 repository-prefixed routes and all 179 image/OG files, with correct responsive srcsets, zero axe violations, page errors or HTTP failures.

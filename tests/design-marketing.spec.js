@@ -174,3 +174,23 @@ test('portfolio link can be shared to a project group without customer details',
     'http://127.0.0.1:5173/projects/',
   );
 });
+
+test('supplied illustrations load while the portfolio remains actual work', async ({ page }) => {
+  await page.goto('/');
+  const hero = page.locator('.hero-frame picture[data-image-kind="illustration"]');
+  await expect(hero).toHaveCount(1);
+  await hero.locator('img').evaluate((image) => image.decode());
+  await expect(page.locator('.hero-frame figcaption')).toContainText('AI-generated');
+  await page.goto('/services/');
+  const images = page.locator('.construction-service picture[data-image-kind="illustration"]');
+  await expect(images).toHaveCount(9);
+  await images.locator('img').evaluateAll(async (items) => {
+    for (const image of items) image.loading = 'eager';
+    await Promise.all(items.map((image) => image.decode()));
+  });
+  await page.goto('/projects/');
+  await expect(page.locator('picture[data-image-kind="illustration"]')).toHaveCount(0);
+  await expect(
+    page.locator('.construction-gallery picture[data-image-kind="photograph"]'),
+  ).toHaveCount(16);
+});

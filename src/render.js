@@ -195,15 +195,15 @@ const process = () =>
 const quotes = () =>
   `<div class="quotes">${testimonials.map((t) => `<figure><span class="quote-mark" aria-hidden="true">“</span><blockquote><p>${escape(t.excerpt)}</p></blockquote><figcaption>${escape(t.name)}<span>Client testimonial</span></figcaption></figure>`).join('')}</div>`;
 const servicePhotos = {
-  'renovations-alterations': 'interior-finish',
-  'brickwork-boundary-walls': 'brickwork-on-site',
-  painting: 'wall-painting',
-  'carpentry-decking-pergolas': 'carpentry-kitchen',
-  'decking-pergolas': 'decking-pergola',
-  'pool-structures-finishes': 'pool-work',
-  'concrete-work': 'concrete-stairs',
-  'plastering-screeds-pool-plastering': 'floor-screed',
-  'custom-projects': 'custom-braai',
+  'renovations-alterations': 'illustration-service-renovations',
+  'brickwork-boundary-walls': 'illustration-service-brickwork',
+  painting: 'illustration-service-painting',
+  'carpentry-decking-pergolas': 'illustration-service-joinery',
+  'decking-pergolas': 'illustration-service-decking-pergolas',
+  'pool-structures-finishes': 'illustration-service-pool-finishes',
+  'concrete-work': 'illustration-service-concrete',
+  'plastering-screeds-pool-plastering': 'illustration-service-plastering-screeds',
+  'custom-projects': 'illustration-service-custom-projects',
 };
 const serviceTiles = (compact = false) =>
   `<div class="construction-services${compact ? ' service-tiles-compact' : ''}" data-balanced-grid>${services.map((service, i) => `<a class="construction-service" href="/services/${service.slug}/">${compact ? '' : picture(servicePhotos[service.slug])}<div><span class="tile-number" aria-hidden="true">0${i + 1}</span><h3>${escape(service.title)}</h3>${compact ? '' : `<p>${escape(service.short)}</p>`}<span class="service-more">Explore the work ${arrow}</span></div></a>`).join('')}</div>`;
@@ -241,7 +241,7 @@ export function picture(slug, { hero = false, className = '' } = {}) {
   const [left, top, width, height] = photoCrops[slug] || [0, 0, 1, 1];
   const cropAspect = (fallback.width * width) / (fallback.height * height);
   const cropStyle = `--crop-width:${width};--crop-height:${height};--crop-center-x:${left + width / 2};--crop-center-y:${top + height / 2};--crop-aspect:${cropAspect}`;
-  return `<picture class="photo-frame ${escape(className)}" data-photo="${slug}" style="${cropStyle}"><source type="image/avif" srcset="${avif.map((v) => `${v.url} ${v.width}w`).join(', ')}" sizes="${sizes}"><img class="photo-image" src="${fallback.url}" srcset="${webp.map((v) => `${v.url} ${v.width}w`).join(', ')}" sizes="${sizes}" width="${fallback.width}" height="${fallback.height}" alt="${escape(image.alt)}" loading="${hero ? 'eager' : 'lazy'}" ${hero ? 'fetchpriority="high"' : ''} decoding="async"></picture>`;
+  return `<picture class="photo-frame ${escape(className)}" data-photo="${slug}" data-image-kind="${image.kind || 'photograph'}" style="${cropStyle}"><source type="image/avif" srcset="${avif.map((v) => `${v.url} ${v.width}w`).join(', ')}" sizes="${sizes}"><img class="photo-image" src="${fallback.url}" srcset="${webp.map((v) => `${v.url} ${v.width}w`).join(', ')}" sizes="${sizes}" width="${fallback.width}" height="${fallback.height}" alt="${escape(image.alt)}" loading="${hero ? 'eager' : 'lazy'}" ${hero ? 'fetchpriority="high"' : ''} decoding="async"></picture>`;
 }
 export function comparison(project) {
   if (!images[project.before] || !images[project.after]) return '';
@@ -261,7 +261,7 @@ function home() {
     ['pool-work', 'Pool surfaces', 'Pool plastering and surface finishing.'],
     ['boundary-wall', 'Walls & boundaries', 'Masonry and the shape of an outdoor space.'],
   ];
-  return `<section class="editorial-hero wrap"><div class="editorial-hero-copy"><p class="eyebrow">CONSTRUCTION &amp; RENOVATIONS · CAPE TOWN</p><h1>Build. Renovate.<br><em>Make it yours.</em><span class="visually-hidden"> Construction in Cape Town.</span></h1><p class="hero-description">${escape(h.heroBody)}</p><div class="hero-actions">${link('/contact/', 'Discuss your project', 'button')}${link('/projects/', 'Explore our work')}</div><p class="hero-location">Based in Kensington. Building in Cape Town.</p></div><figure class="hero-frame">${picture('decking-pergola', { hero: true })}<figcaption class="glass-panel"><span>Timber decking &amp; pergola</span><a href="/projects/" aria-label="View the construction portfolio">Our work ${arrow}</a></figcaption></figure></section>
+  return `<section class="editorial-hero wrap"><div class="editorial-hero-copy"><p class="eyebrow">CONSTRUCTION &amp; RENOVATIONS · CAPE TOWN</p><h1>Build. Renovate.<br><em>Make it yours.</em><span class="visually-hidden"> Construction in Cape Town.</span></h1><p class="hero-description">${escape(h.heroBody)}</p><div class="hero-actions">${link('/contact/', 'Discuss your project', 'button')}${link('/projects/', 'Explore our work')}</div><p class="hero-location">Based in Kensington. Building in Cape Town.</p></div><figure class="hero-frame">${picture('illustration-hero-outdoor-living', { hero: true })}<figcaption class="glass-panel"><span>AI-generated design illustration</span><a href="/services/" aria-label="Explore construction services">Services ${arrow}</a></figcaption></figure></section>
   <div class="scope-strip wrap" data-balanced-grid><span>Residential &amp; commercial</span><span>Building &amp; renovations</span><span>Timber, concrete &amp; finishes</span></div>
   <section class="intro-statement wrap"><div><p class="eyebrow">REGARDIN CONSTRUCTION</p><h2>One team for the build.<br><em>And the finishing.</em></h2></div><div><p class="intro-lead">A new room. A better layout. An outdoor space you can use.</p><p>${escape(h.introBody)}</p>${link('/about/', 'Get to know Regardin')}</div></section>
   <section class="services-editorial"><div class="wrap"><div class="section-header"><div><p class="eyebrow">WHAT WE DO</p><h2>The work, from<br><em>start to finish.</em></h2></div><p>Building, renovation and finishing work for homes and businesses. Explore the service that fits your project.</p></div>${serviceTiles(true)}</div></section>
@@ -278,7 +278,7 @@ function content(route) {
     case 'home':
       return home();
     case 'services':
-      return `${heading(copy.serviceHub.eyebrow, copy.serviceHub.heading, copy.serviceHub.body)}<section class="wrap content-section"><h2 class="visually-hidden">Construction and finishing services</h2>${serviceTiles()}<div class="construction-scope"><h2>New builds, maintenance & outdoor work</h2><p>${copy.home.introBody}</p>${link('/contact/', 'Discuss your building project', 'button')}</div></section>${cta()}`;
+      return `${heading(copy.serviceHub.eyebrow, copy.serviceHub.heading, copy.serviceHub.body)}<section class="wrap content-section"><h2 class="visually-hidden">Construction and finishing services</h2><p>Service images are AI-generated illustrations. <a href="/projects/">View photographs of Regardin’s work.</a></p>${serviceTiles()}<div class="construction-scope"><h2>New builds, maintenance & outdoor work</h2><p>${copy.home.introBody}</p>${link('/contact/', 'Discuss your building project', 'button')}</div></section>${cta()}`;
     case 'service': {
       const service = route.service;
       return `${heading('BUILDING & FINISHING / CAPE TOWN', service.title + '.', service.description)}<section class="service-detail wrap"><figure class="construction-detail-photo">${picture(servicePhotos[service.slug], { hero: true })}<figcaption>${escape(images[servicePhotos[service.slug]]?.alt || '')}</figcaption></figure><div><p class="eyebrow">${copy.serviceHub.scopeEyebrow}</p><h2>${copy.serviceHub.scopeHeading}</h2><ul class="scope-list">${service.items.map((item) => `<li>${escape(item)}</li>`).join('')}</ul><p>${copy.serviceHub.scopeNote}</p><h3>Planning this work</h3><p>${service.consideration}</p>${link('/contact/?service=' + service.slug, copy.serviceHub.serviceCta, 'button')}</div></section><section class="wrap construction-section"><h2>More work from the portfolio</h2>${gallery(service.slug === 'carpentry-decking-pergolas' ? ['decking-detail', 'carpentry-kitchen', 'cupboard-carpentry'] : service.slug === 'concrete-work' ? ['pool-concrete', 'concrete-stairs', 'pool-work'] : service.slug === 'painting' ? ['interior-painting', 'wall-painting', 'interior-finish'] : service.slug === 'brickwork-boundary-walls' ? ['boundary-wall', 'brickwork-on-site', 'masonry-detail'] : service.slug === 'plastering-screeds-pool-plastering' ? ['floor-screed', 'pool-work', 'interior-finish'] : service.slug === 'decking-pergolas' ? ['decking-pergola', 'decking-detail', 'building-exterior'] : service.slug === 'pool-structures-finishes' ? ['pool-work', 'pool-concrete', 'decking-pergola'] : ['interior-painting', 'custom-braai', 'decking-pergola'])}</section><section class="wrap planning"><h2>Start with a clear brief.</h2>${process()}</section>${cta()}`;
@@ -302,7 +302,7 @@ function content(route) {
     case 'privacy':
       return `${heading('WEBSITE PRIVACY / DRAFT', 'Your information.<br>Your project.', 'This draft explains the current preview and the intended enquiry service. It requires owner and legal review before launch.')}<article class="wrap legal"><h2>The current preview</h2><p>This preview does not load analytics, advertising tags or marketing cookies. The brief-preparation tools work on your device. Opening an email draft sends the text to your chosen email application; a brief is not delivered to Regardin until you send it.</p><h2>Direct calls and emails</h2><p>If you call or email Regardin, your contact details and message are available to the recipient. Ask Regardin about how correspondence is handled and retained.</p><h2>The planned online enquiry service</h2><p>When a Formspree endpoint is connected, the enquiry form sends your name, contact details and project brief to Formspree for delivery to the configured recipient. Attachments stay disabled for that service until its plan and handling are confirmed. The alternate PHP enquiry service uses the cPanel hosting account for private enquiry records and attachments, session verification and rate limits for abuse prevention, and its approved mail service for notifications. The form will state when online submission becomes available.</p><h2>Your choices and rights</h2><p>Use the contact details on this website to ask about your enquiry information. Under applicable South African privacy law, requests can include access, correction and deletion, subject to legal retention requirements.</p>${notice('responsible legal entity, Information Officer, retention periods, provider agreements, cross-border safeguards and privacy contact')}</article>${cta()}`;
     case 'terms':
-      return `${heading('WEBSITE TERMS / DRAFT', 'A clear agreement<br>comes before the work.', 'These draft website terms are for review. They do not replace a project contract.')}<article class="wrap legal"><h2>Website information</h2><p>Service descriptions provide a starting point for an enquiry. They do not constitute a fixed price, a confirmed booking or a complete specification.</p><h2>Project arrangements</h2><p>Scope, exclusions, materials, approvals, timing, payment terms, variations and any warranty need to be agreed directly and recorded in the project agreement.</p><h2>Illustrations and project photographs</h2><p>The photographs shown are reused from Regardin Construction’s existing website. Descriptive captions identify the visible work; they do not add project locations, dates, prices or specifications that the source does not provide.</p>${notice('legal entity, governing terms, quotation validity, deposits and warranty wording; legal approval required')}</article>${cta()}`;
+      return `${heading('WEBSITE TERMS / DRAFT', 'A clear agreement<br>comes before the work.', 'These draft website terms are for review. They do not replace a project contract.')}<article class="wrap legal"><h2>Website information</h2><p>Service descriptions provide a starting point for an enquiry. They do not constitute a fixed price, a confirmed booking or a complete specification.</p><h2>Project arrangements</h2><p>Scope, exclusions, materials, approvals, timing, payment terms, variations and any warranty need to be agreed directly and recorded in the project agreement.</p><h2>Illustrations and project photographs</h2><p>The hero and service images are labelled AI-generated illustrations, supplied for this design. They are not photographs of completed Regardin projects. Portfolio photographs are reused from Regardin Construction’s existing website. Descriptive captions identify the visible work; they do not add project locations, dates, prices or specifications that the source does not provide.</p>${notice('legal entity, governing terms, quotation validity, deposits and warranty wording; legal approval required')}</article>${cta()}`;
     case 'thanks':
       return `${heading('ENQUIRY STATUS', 'Check your<br>enquiry receipt.', 'Opening this page alone does not mean an enquiry has been received.')}<section class="wrap content-section reading-width"><div id="receipt-status"><p>A successful online submission returns a receipt after the enquiry is stored. If you sent an email, check your email app’s sent folder.</p></div>${link('/contact/', 'Return to contact', 'button')}</section>`;
     case 'styleguide':
@@ -376,7 +376,11 @@ export function render(route, mode = 'preview') {
         })),
     });
   const socialSlug =
-    route.kind === 'service' ? servicePhotos[route.service.slug] : 'decking-pergola';
+    route.kind === 'service'
+      ? servicePhotos[route.service.slug]
+      : route.kind === 'home'
+        ? 'illustration-hero-outdoor-living'
+        : 'decking-pergola';
   const socialImage =
     (globalThis.process.env.SITE_ORIGIN || business.url) +
     (globalThis.process.env.SITE_BASE || '/').replace(/\/$/, '') +

@@ -26,6 +26,7 @@ test('image pipeline strips metadata, emits responsive formats and excludes unap
           original: filename,
           sourceUrl: 'https://example.com/synthetic-test',
           alt: 'Synthetic image used only in an automated test',
+          kind: 'illustration',
           approved: true,
           hero: true,
         },
@@ -43,6 +44,7 @@ test('image pipeline strips metadata, emits responsive formats and excludes unap
     });
     const entries = JSON.parse(await readFile(index, 'utf8'));
     assert.deepEqual(Object.keys(entries), ['synthetic-test']);
+    assert.equal(entries['synthetic-test'].kind, 'illustration');
     const variants = entries['synthetic-test'].variants;
     assert.equal(variants.length, 4);
     for (const v of variants) {

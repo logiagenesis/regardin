@@ -50,3 +50,28 @@ test('Formspree native form and verification token render only with valid config
     else process.env.FORMSPREE_ENDPOINT = original;
   }
 });
+
+test('generated service illustrations remain separate from actual portfolio photographs', () => {
+  const assets = JSON.parse(readFileSync('src/data/assets.json', 'utf8'));
+  const illustrations = assets.filter((asset) => asset.kind === 'illustration');
+  assert.equal(illustrations.length, 10);
+  for (const asset of illustrations) {
+    assert.match(asset.alt, /^AI-generated illustration/);
+    assert.match(asset.originalSha256, /^[a-f0-9]{64}$/);
+  }
+  const home = render(routes.find((route) => route.kind === 'home'));
+  assert.ok(home.includes('data-photo="illustration-hero-outdoor-living"'));
+  assert.ok(home.includes('AI-generated design illustration'));
+  const hub = render(routes.find((route) => route.kind === 'services'));
+  assert.equal((hub.match(/data-image-kind="illustration"/g) || []).length, 9);
+  assert.ok(hub.includes('Service images are AI-generated illustrations.'));
+  for (const route of routes.filter((route) => route.kind === 'service')) {
+    const html = render(route);
+    assert.equal((html.match(/data-image-kind="illustration"/g) || []).length, 1);
+    assert.equal((html.match(/data-image-kind="photograph"/g) || []).length, 3);
+    assert.match(html, /<figcaption>AI-generated illustration/);
+  }
+  const portfolio = render(routes.find((route) => route.path === '/projects/'));
+  assert.equal((portfolio.match(/data-image-kind="photograph"/g) || []).length, 16);
+  assert.ok(!portfolio.includes('data-image-kind="illustration"'));
+});

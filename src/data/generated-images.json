@@ -536,5 +536,808 @@
     ],
     "og": "/images/cupboard-carpentry-og.jpg",
     "ogBytes": 34722
+  },
+  "illustration-hero-outdoor-living": {
+    "kind": "illustration",
+    "original": "generated-batch/regardin-hero-outdoor-living-2k.png",
+    "originalSha256": "3f4b49e4591fd2476c85440e1bff66106954f453422dc6381f9069d4c640f387",
+    "alt": "AI-generated illustration of a house with timber decking, pergola and garden",
+    "sourceUrl": "https://drive.google.com/file/d/14Eq6nEj35YX1-CTwJ2vEWVTne0-MX74R/view",
+    "variants": [
+      {
+        "url": "/images/illustration-hero-outdoor-living-480.avif",
+        "width": 480,
+        "height": 358,
+        "bytes": 15617,
+        "format": "avif"
+      },
+      {
+        "url": "/images/illustration-hero-outdoor-living-480.webp",
+        "width": 480,
+        "height": 358,
+        "bytes": 31896,
+        "format": "webp"
+      },
+      {
+        "url": "/images/illustration-hero-outdoor-living-800.avif",
+        "width": 800,
+        "height": 597,
+        "bytes": 38151,
+        "format": "avif"
+      },
+      {
+        "url": "/images/illustration-hero-outdoor-living-800.webp",
+        "width": 800,
+        "height": 597,
+        "bytes": 78648,
+        "format": "webp"
+      },
+      {
+        "url": "/images/illustration-hero-outdoor-living-1200.avif",
+        "width": 1200,
+        "height": 896,
+        "bytes": 78098,
+        "format": "avif"
+      },
+      {
+        "url": "/images/illustration-hero-outdoor-living-1200.webp",
+        "width": 1200,
+        "height": 896,
+        "bytes": 162596,
+        "format": "webp"
+      },
+      {
+        "url": "/images/illustration-hero-outdoor-living-1600.avif",
+        "width": 1600,
+        "height": 1195,
+        "bytes": 133984,
+        "format": "avif"
+      },
+      {
+        "url": "/images/illustration-hero-outdoor-living-1600.webp",
+        "width": 1600,
+        "height": 1195,
+        "bytes": 201458,
+        "format": "webp"
+      },
+      {
+        "url": "/images/illustration-hero-outdoor-living-2048.avif",
+        "width": 2048,
+        "height": 1529,
+        "bytes": 163184,
+        "format": "avif"
+      }
+    ],
+    "og": "/images/illustration-hero-outdoor-living-og.jpg",
+    "ogBytes": 175270
+  },
+  "illustration-service-renovations": {
+    "kind": "illustration",
+    "original": "generated-batch/regardin-service-renovations-2k.png",
+    "originalSha256": "a4b858b04d9a09d2aca627f9481da6f2ce75eee1eb90f5cda0b96a8c586c5d84",
+    "alt": "AI-generated illustration of a renovated living and dining room",
+    "sourceUrl": "https://drive.google.com/file/d/1O0byTXSV6YQjRwhB_4zneqo-DYwyfNrg/view",
+    "variants": [
+      {
+        "url": "/images/illustration-service-renovations-480.avif",
+        "width": 480,
+        "height": 358,
+        "bytes": 9088,
+        "format": "avif"
+      },
+      {
+        "url": "/images/illustration-service-renovations-480.webp",
+        "width": 480,
+        "height": 358,
+        "bytes": 16550,
+        "format": "webp"
+      },
+      {
+        "url": "/images/illustration-service-renovations-800.avif",
+        "width": 800,
+        "height": 597,
+        "bytes": 19841,
+        "format": "avif"
+      },
+      {
+        "url": "/images/illustration-service-renovations-800.webp",
+        "width": 800,
+        "height": 597,
+        "bytes": 36478,
+        "format": "webp"
+      },
+      {
+        "url": "/images/illustration-service-renovations-1200.avif",
+        "width": 1200,
+        "height": 896,
+        "bytes": 36965,
+        "format": "avif"
+      },
+      {
+        "url": "/images/illustration-service-renovations-1200.webp",
+        "width": 1200,
+        "height": 896,
+        "bytes": 70806,
+        "format": "webp"
+      },
+      {
+        "url": "/images/illustration-service-renovations-1600.avif",
+        "width": 1600,
+        "height": 1195,
+        "bytes": 61036,
+        "format": "avif"
+      },
+      {
+        "url": "/images/illustration-service-renovations-1600.webp",
+        "width": 1600,
+        "height": 1195,
+        "bytes": 115048,
+        "format": "webp"
+      },
+      {
+        "url": "/images/illustration-service-renovations-2048.avif",
+        "width": 2048,
+        "height": 1529,
+        "bytes": 92881,
+        "format": "avif"
+      },
+      {
+        "url": "/images/illustration-service-renovations-2048.webp",
+        "width": 2048,
+        "height": 1529,
+        "bytes": 171428,
+        "format": "webp"
+      }
+    ],
+    "og": "/images/illustration-service-renovations-og.jpg",
+    "ogBytes": 112260
+  },
+  "illustration-service-brickwork": {
+    "kind": "illustration",
+    "original": "generated-batch/regardin-service-brickwork-2k.png",
+    "originalSha256": "5cd4906e688951edb1a7cd126154a7b329a5e533a146a6bfd459791aa9561e7a",
+    "alt": "AI-generated illustration of a brick boundary pillar and plastered wall",
+    "sourceUrl": "https://drive.google.com/file/d/1TMV-_vQj5OqLWSN5Ksx12uf71PCLi4Qz/view",
+    "variants": [
+      {
+        "url": "/images/illustration-service-brickwork-480.avif",
+        "width": 480,
+        "height": 358,
+        "bytes": 14900,
+        "format": "avif"
+      },
+      {
+        "url": "/images/illustration-service-brickwork-480.webp",
+        "width": 480,
+        "height": 358,
+        "bytes": 29398,
+        "format": "webp"
+      },
+      {
+        "url": "/images/illustration-service-brickwork-800.avif",
+        "width": 800,
+        "height": 597,
+        "bytes": 32093,
+        "format": "avif"
+      },
+      {
+        "url": "/images/illustration-service-brickwork-800.webp",
+        "width": 800,
+        "height": 597,
+        "bytes": 63080,
+        "format": "webp"
+      },
+      {
+        "url": "/images/illustration-service-brickwork-1200.avif",
+        "width": 1200,
+        "height": 896,
+        "bytes": 58679,
+        "format": "avif"
+      },
+      {
+        "url": "/images/illustration-service-brickwork-1200.webp",
+        "width": 1200,
+        "height": 896,
+        "bytes": 118492,
+        "format": "webp"
+      },
+      {
+        "url": "/images/illustration-service-brickwork-1600.avif",
+        "width": 1600,
+        "height": 1195,
+        "bytes": 94877,
+        "format": "avif"
+      },
+      {
+        "url": "/images/illustration-service-brickwork-1600.webp",
+        "width": 1600,
+        "height": 1195,
+        "bytes": 203190,
+        "format": "webp"
+      },
+      {
+        "url": "/images/illustration-service-brickwork-2048.avif",
+        "width": 2048,
+        "height": 1529,
+        "bytes": 149838,
+        "format": "avif"
+      },
+      {
+        "url": "/images/illustration-service-brickwork-2048.webp",
+        "width": 2048,
+        "height": 1529,
+        "bytes": 323854,
+        "format": "webp"
+      }
+    ],
+    "og": "/images/illustration-service-brickwork-og.jpg",
+    "ogBytes": 133083
+  },
+  "illustration-service-painting": {
+    "kind": "illustration",
+    "original": "generated-batch/regardin-service-painting-2k.png",
+    "originalSha256": "e760ac5bb0cda94d21c163a768d0000b7d630f4000403c46421bf742277e4b35",
+    "alt": "AI-generated illustration of a painted green feature wall",
+    "sourceUrl": "https://drive.google.com/file/d/1gTZQBJOhx2QK595-BNNAZ9NpUPnCqzTV/view",
+    "variants": [
+      {
+        "url": "/images/illustration-service-painting-480.avif",
+        "width": 480,
+        "height": 358,
+        "bytes": 5984,
+        "format": "avif"
+      },
+      {
+        "url": "/images/illustration-service-painting-480.webp",
+        "width": 480,
+        "height": 358,
+        "bytes": 10050,
+        "format": "webp"
+      },
+      {
+        "url": "/images/illustration-service-painting-800.avif",
+        "width": 800,
+        "height": 597,
+        "bytes": 12936,
+        "format": "avif"
+      },
+      {
+        "url": "/images/illustration-service-painting-800.webp",
+        "width": 800,
+        "height": 597,
+        "bytes": 21570,
+        "format": "webp"
+      },
+      {
+        "url": "/images/illustration-service-painting-1200.avif",
+        "width": 1200,
+        "height": 896,
+        "bytes": 24307,
+        "format": "avif"
+      },
+      {
+        "url": "/images/illustration-service-painting-1200.webp",
+        "width": 1200,
+        "height": 896,
+        "bytes": 40466,
+        "format": "webp"
+      },
+      {
+        "url": "/images/illustration-service-painting-1600.avif",
+        "width": 1600,
+        "height": 1195,
+        "bytes": 37077,
+        "format": "avif"
+      },
+      {
+        "url": "/images/illustration-service-painting-1600.webp",
+        "width": 1600,
+        "height": 1195,
+        "bytes": 64884,
+        "format": "webp"
+      },
+      {
+        "url": "/images/illustration-service-painting-2048.avif",
+        "width": 2048,
+        "height": 1529,
+        "bytes": 56288,
+        "format": "avif"
+      },
+      {
+        "url": "/images/illustration-service-painting-2048.webp",
+        "width": 2048,
+        "height": 1529,
+        "bytes": 99350,
+        "format": "webp"
+      }
+    ],
+    "og": "/images/illustration-service-painting-og.jpg",
+    "ogBytes": 68798
+  },
+  "illustration-service-joinery": {
+    "kind": "illustration",
+    "original": "generated-batch/regardin-service-joinery-2k.png",
+    "originalSha256": "03423d045ed5958a37b5d7011b9afaf80571386ec8f1110ee44b39eaf77f0bd7",
+    "alt": "AI-generated illustration of fitted kitchen cabinets and a timber countertop",
+    "sourceUrl": "https://drive.google.com/file/d/1OzE9wk85C7g6Zy669wH0RARzQEWwM3DC/view",
+    "variants": [
+      {
+        "url": "/images/illustration-service-joinery-480.avif",
+        "width": 480,
+        "height": 358,
+        "bytes": 7255,
+        "format": "avif"
+      },
+      {
+        "url": "/images/illustration-service-joinery-480.webp",
+        "width": 480,
+        "height": 358,
+        "bytes": 11128,
+        "format": "webp"
+      },
+      {
+        "url": "/images/illustration-service-joinery-800.avif",
+        "width": 800,
+        "height": 597,
+        "bytes": 14515,
+        "format": "avif"
+      },
+      {
+        "url": "/images/illustration-service-joinery-800.webp",
+        "width": 800,
+        "height": 597,
+        "bytes": 23204,
+        "format": "webp"
+      },
+      {
+        "url": "/images/illustration-service-joinery-1200.avif",
+        "width": 1200,
+        "height": 896,
+        "bytes": 25655,
+        "format": "avif"
+      },
+      {
+        "url": "/images/illustration-service-joinery-1200.webp",
+        "width": 1200,
+        "height": 896,
+        "bytes": 41872,
+        "format": "webp"
+      },
+      {
+        "url": "/images/illustration-service-joinery-1600.avif",
+        "width": 1600,
+        "height": 1195,
+        "bytes": 38983,
+        "format": "avif"
+      },
+      {
+        "url": "/images/illustration-service-joinery-1600.webp",
+        "width": 1600,
+        "height": 1195,
+        "bytes": 63562,
+        "format": "webp"
+      },
+      {
+        "url": "/images/illustration-service-joinery-2048.avif",
+        "width": 2048,
+        "height": 1529,
+        "bytes": 56514,
+        "format": "avif"
+      },
+      {
+        "url": "/images/illustration-service-joinery-2048.webp",
+        "width": 2048,
+        "height": 1529,
+        "bytes": 92294,
+        "format": "webp"
+      }
+    ],
+    "og": "/images/illustration-service-joinery-og.jpg",
+    "ogBytes": 79610
+  },
+  "illustration-service-decking-pergolas": {
+    "kind": "illustration",
+    "original": "generated-batch/regardin-service-decking-pergolas-2k.png",
+    "originalSha256": "633eb04cdca107726cc0233479d437f89ce4d26f693ff6f5ff889211d7a48a65",
+    "alt": "AI-generated illustration of timber decking and a pergola connection",
+    "sourceUrl": "https://drive.google.com/file/d/1YUBMVPxa7EdDHDDaURHmgEzCkKiwh58f/view",
+    "variants": [
+      {
+        "url": "/images/illustration-service-decking-pergolas-480.avif",
+        "width": 480,
+        "height": 358,
+        "bytes": 14948,
+        "format": "avif"
+      },
+      {
+        "url": "/images/illustration-service-decking-pergolas-480.webp",
+        "width": 480,
+        "height": 358,
+        "bytes": 32446,
+        "format": "webp"
+      },
+      {
+        "url": "/images/illustration-service-decking-pergolas-800.avif",
+        "width": 800,
+        "height": 597,
+        "bytes": 34305,
+        "format": "avif"
+      },
+      {
+        "url": "/images/illustration-service-decking-pergolas-800.webp",
+        "width": 800,
+        "height": 597,
+        "bytes": 74732,
+        "format": "webp"
+      },
+      {
+        "url": "/images/illustration-service-decking-pergolas-1200.avif",
+        "width": 1200,
+        "height": 896,
+        "bytes": 64644,
+        "format": "avif"
+      },
+      {
+        "url": "/images/illustration-service-decking-pergolas-1200.webp",
+        "width": 1200,
+        "height": 896,
+        "bytes": 144512,
+        "format": "webp"
+      },
+      {
+        "url": "/images/illustration-service-decking-pergolas-1600.avif",
+        "width": 1600,
+        "height": 1195,
+        "bytes": 102387,
+        "format": "avif"
+      },
+      {
+        "url": "/images/illustration-service-decking-pergolas-1600.webp",
+        "width": 1600,
+        "height": 1195,
+        "bytes": 234794,
+        "format": "webp"
+      },
+      {
+        "url": "/images/illustration-service-decking-pergolas-2048.avif",
+        "width": 2048,
+        "height": 1529,
+        "bytes": 152146,
+        "format": "avif"
+      },
+      {
+        "url": "/images/illustration-service-decking-pergolas-2048.webp",
+        "width": 2048,
+        "height": 1529,
+        "bytes": 350686,
+        "format": "webp"
+      }
+    ],
+    "og": "/images/illustration-service-decking-pergolas-og.jpg",
+    "ogBytes": 161660
+  },
+  "illustration-service-concrete": {
+    "kind": "illustration",
+    "original": "generated-batch/regardin-service-concrete-2k.png",
+    "originalSha256": "21f9ef256a7965ad561eb6247179c9a5bbd67caf6a05dc2c1f5736a1c28496da",
+    "alt": "AI-generated illustration of exterior concrete steps",
+    "sourceUrl": "https://drive.google.com/file/d/1TJcoo8TWjWZDhBEXbRmzdz0A9qAUAmoh/view",
+    "variants": [
+      {
+        "url": "/images/illustration-service-concrete-480.avif",
+        "width": 480,
+        "height": 358,
+        "bytes": 15076,
+        "format": "avif"
+      },
+      {
+        "url": "/images/illustration-service-concrete-480.webp",
+        "width": 480,
+        "height": 358,
+        "bytes": 30552,
+        "format": "webp"
+      },
+      {
+        "url": "/images/illustration-service-concrete-800.avif",
+        "width": 800,
+        "height": 597,
+        "bytes": 39412,
+        "format": "avif"
+      },
+      {
+        "url": "/images/illustration-service-concrete-800.webp",
+        "width": 800,
+        "height": 597,
+        "bytes": 79994,
+        "format": "webp"
+      },
+      {
+        "url": "/images/illustration-service-concrete-1200.avif",
+        "width": 1200,
+        "height": 896,
+        "bytes": 82518,
+        "format": "avif"
+      },
+      {
+        "url": "/images/illustration-service-concrete-1200.webp",
+        "width": 1200,
+        "height": 896,
+        "bytes": 169738,
+        "format": "webp"
+      },
+      {
+        "url": "/images/illustration-service-concrete-1600.avif",
+        "width": 1600,
+        "height": 1195,
+        "bytes": 138365,
+        "format": "avif"
+      },
+      {
+        "url": "/images/illustration-service-concrete-1600.webp",
+        "width": 1600,
+        "height": 1195,
+        "bytes": 296464,
+        "format": "webp"
+      },
+      {
+        "url": "/images/illustration-service-concrete-2048.avif",
+        "width": 2048,
+        "height": 1529,
+        "bytes": 217035,
+        "format": "avif"
+      },
+      {
+        "url": "/images/illustration-service-concrete-2048.webp",
+        "width": 2048,
+        "height": 1529,
+        "bytes": 461678,
+        "format": "webp"
+      }
+    ],
+    "og": "/images/illustration-service-concrete-og.jpg",
+    "ogBytes": 180865
+  },
+  "illustration-service-plastering-screeds": {
+    "kind": "illustration",
+    "original": "generated-batch/regardin-service-plastering-screeds-2k.png",
+    "originalSha256": "bdc33a11edfa378827b7408f99f230159f6ca54250ed84647dcabe6fae236f90",
+    "alt": "AI-generated illustration of a plastered room and floor screed",
+    "sourceUrl": "https://drive.google.com/file/d/1BGTHhGmPHO0nMXRYdIZUpGgkQEHd_-AV/view",
+    "variants": [
+      {
+        "url": "/images/illustration-service-plastering-screeds-480.avif",
+        "width": 480,
+        "height": 358,
+        "bytes": 3989,
+        "format": "avif"
+      },
+      {
+        "url": "/images/illustration-service-plastering-screeds-480.webp",
+        "width": 480,
+        "height": 358,
+        "bytes": 5634,
+        "format": "webp"
+      },
+      {
+        "url": "/images/illustration-service-plastering-screeds-800.avif",
+        "width": 800,
+        "height": 597,
+        "bytes": 9294,
+        "format": "avif"
+      },
+      {
+        "url": "/images/illustration-service-plastering-screeds-800.webp",
+        "width": 800,
+        "height": 597,
+        "bytes": 13242,
+        "format": "webp"
+      },
+      {
+        "url": "/images/illustration-service-plastering-screeds-1200.avif",
+        "width": 1200,
+        "height": 896,
+        "bytes": 17214,
+        "format": "avif"
+      },
+      {
+        "url": "/images/illustration-service-plastering-screeds-1200.webp",
+        "width": 1200,
+        "height": 896,
+        "bytes": 26454,
+        "format": "webp"
+      },
+      {
+        "url": "/images/illustration-service-plastering-screeds-1600.avif",
+        "width": 1600,
+        "height": 1195,
+        "bytes": 27856,
+        "format": "avif"
+      },
+      {
+        "url": "/images/illustration-service-plastering-screeds-1600.webp",
+        "width": 1600,
+        "height": 1195,
+        "bytes": 46336,
+        "format": "webp"
+      },
+      {
+        "url": "/images/illustration-service-plastering-screeds-2048.avif",
+        "width": 2048,
+        "height": 1529,
+        "bytes": 39947,
+        "format": "avif"
+      },
+      {
+        "url": "/images/illustration-service-plastering-screeds-2048.webp",
+        "width": 2048,
+        "height": 1529,
+        "bytes": 79712,
+        "format": "webp"
+      }
+    ],
+    "og": "/images/illustration-service-plastering-screeds-og.jpg",
+    "ogBytes": 46516
+  },
+  "illustration-service-pool-finishes": {
+    "kind": "illustration",
+    "original": "generated-batch/regardin-service-pool-finishes-2k.png",
+    "originalSha256": "6857a25e513bc680e37fd64ddf432993accaa80b0f503df5015307c6864f6a2b",
+    "alt": "AI-generated illustration of a swimming pool and coping",
+    "sourceUrl": "https://drive.google.com/file/d/1YKPF1e2nKcWecSrKrJqecFXTU2g0Mz_Q/view",
+    "variants": [
+      {
+        "url": "/images/illustration-service-pool-finishes-480.avif",
+        "width": 480,
+        "height": 358,
+        "bytes": 15313,
+        "format": "avif"
+      },
+      {
+        "url": "/images/illustration-service-pool-finishes-480.webp",
+        "width": 480,
+        "height": 358,
+        "bytes": 31236,
+        "format": "webp"
+      },
+      {
+        "url": "/images/illustration-service-pool-finishes-800.avif",
+        "width": 800,
+        "height": 597,
+        "bytes": 39687,
+        "format": "avif"
+      },
+      {
+        "url": "/images/illustration-service-pool-finishes-800.webp",
+        "width": 800,
+        "height": 597,
+        "bytes": 81228,
+        "format": "webp"
+      },
+      {
+        "url": "/images/illustration-service-pool-finishes-1200.avif",
+        "width": 1200,
+        "height": 896,
+        "bytes": 81661,
+        "format": "avif"
+      },
+      {
+        "url": "/images/illustration-service-pool-finishes-1200.webp",
+        "width": 1200,
+        "height": 896,
+        "bytes": 167732,
+        "format": "webp"
+      },
+      {
+        "url": "/images/illustration-service-pool-finishes-1600.avif",
+        "width": 1600,
+        "height": 1195,
+        "bytes": 135235,
+        "format": "avif"
+      },
+      {
+        "url": "/images/illustration-service-pool-finishes-1600.webp",
+        "width": 1600,
+        "height": 1195,
+        "bytes": 291138,
+        "format": "webp"
+      },
+      {
+        "url": "/images/illustration-service-pool-finishes-2048.avif",
+        "width": 2048,
+        "height": 1529,
+        "bytes": 207368,
+        "format": "avif"
+      },
+      {
+        "url": "/images/illustration-service-pool-finishes-2048.webp",
+        "width": 2048,
+        "height": 1529,
+        "bytes": 453812,
+        "format": "webp"
+      }
+    ],
+    "og": "/images/illustration-service-pool-finishes-og.jpg",
+    "ogBytes": 184592
+  },
+  "illustration-service-custom-projects": {
+    "kind": "illustration",
+    "original": "generated-batch/regardin-service-custom-projects-2k.png",
+    "originalSha256": "ce14b7f33127b0bb3027a851818c5028019821c4a4ae1351c957fc69c1a5ba5b",
+    "alt": "AI-generated illustration of a built-in outdoor braai",
+    "sourceUrl": "https://drive.google.com/file/d/1QpoqZh2b1iTeTuZC9WEMc39BS24AAk90/view",
+    "variants": [
+      {
+        "url": "/images/illustration-service-custom-projects-480.avif",
+        "width": 480,
+        "height": 358,
+        "bytes": 15075,
+        "format": "avif"
+      },
+      {
+        "url": "/images/illustration-service-custom-projects-480.webp",
+        "width": 480,
+        "height": 358,
+        "bytes": 27380,
+        "format": "webp"
+      },
+      {
+        "url": "/images/illustration-service-custom-projects-800.avif",
+        "width": 800,
+        "height": 597,
+        "bytes": 36118,
+        "format": "avif"
+      },
+      {
+        "url": "/images/illustration-service-custom-projects-800.webp",
+        "width": 800,
+        "height": 597,
+        "bytes": 66062,
+        "format": "webp"
+      },
+      {
+        "url": "/images/illustration-service-custom-projects-1200.avif",
+        "width": 1200,
+        "height": 896,
+        "bytes": 70381,
+        "format": "avif"
+      },
+      {
+        "url": "/images/illustration-service-custom-projects-1200.webp",
+        "width": 1200,
+        "height": 896,
+        "bytes": 133464,
+        "format": "webp"
+      },
+      {
+        "url": "/images/illustration-service-custom-projects-1600.avif",
+        "width": 1600,
+        "height": 1195,
+        "bytes": 117161,
+        "format": "avif"
+      },
+      {
+        "url": "/images/illustration-service-custom-projects-1600.webp",
+        "width": 1600,
+        "height": 1195,
+        "bytes": 222364,
+        "format": "webp"
+      },
+      {
+        "url": "/images/illustration-service-custom-projects-2048.avif",
+        "width": 2048,
+        "height": 1529,
+        "bytes": 177588,
+        "format": "avif"
+      },
+      {
+        "url": "/images/illustration-service-custom-projects-2048.webp",
+        "width": 2048,
+        "height": 1529,
+        "bytes": 341764,
+        "format": "webp"
+      }
+    ],
+    "og": "/images/illustration-service-custom-projects-og.jpg",
+    "ogBytes": 154381
   }
 }

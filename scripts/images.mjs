@@ -26,6 +26,7 @@ for (const asset of assets.filter((a) => a.approved === true)) {
     cached.original === asset.original &&
     cached.sourceUrl === asset.sourceUrl &&
     cached.alt === asset.alt &&
+    cached.kind === asset.kind &&
     cached.originalSha256 === asset.originalSha256
   ) {
     for (const variant of cached.variants) {
@@ -40,16 +41,24 @@ for (const asset of assets.filter((a) => a.approved === true)) {
   const input = await readFile(source);
   const meta = await sharp(input).metadata();
   await mkdir(destination, { recursive: true });
-  const widths = [480, 800, 1200, 1600].filter((w) => w <= Math.max(meta.width, 480));
+  const widths = [480, 800, 1200, 1600, ...(asset.kind === 'illustration' ? [2048] : [])].filter(
+    (w) => w <= Math.max(meta.width, 480),
+  );
   const variants = [];
   for (const width of widths) {
     for (const format of ['avif', 'webp']) {
+      if (asset.hero && width > 1600 && format === 'webp') continue;
       const filename = `${asset.slug}-${width}.${format}`;
-      const result = await sharp(input)
-        .rotate()
-        .resize({ width, withoutEnlargement: true })
-        .toFormat(format, { quality: format === 'avif' ? 48 : 75 })
-        .toFile(resolve(destination, filename));
+      let quality = format === 'avif' ? 48 : 75;
+      let result;
+      do {
+        result = await sharp(input)
+          .rotate()
+          .resize({ width, withoutEnlargement: true })
+          .toFormat(format, { quality })
+          .toFile(resolve(destination, filename));
+        quality -= 5;
+      } while (asset.hero && result.size > 200 * 1024 && quality >= 40);
       variants.push({
         url: '/images/' + filename,
         width: result.width,
@@ -67,6 +76,7 @@ for (const asset of assets.filter((a) => a.approved === true)) {
     .jpeg({ quality: 80 })
     .toFile(resolve(destination, asset.slug + '-og.jpg'));
   output[asset.slug] = {
+    ...(asset.kind ? { kind: asset.kind } : {}),
     original: asset.original,
     originalSha256: asset.originalSha256,
     alt: asset.alt,

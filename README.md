@@ -33,7 +33,7 @@ The default build is a **noindex design preview**. `npm run build:production` de
 
 `src/data/` holds business facts, service enquiries, testimonial source text and FAQs. `src/render.js` supplies shared header/footer, route content and metadata through the in-repository Vite HTML plugin. Pages contain their content without JavaScript. Fonts are self-hosted; there are no UI frameworks or slider libraries. Optional consent-based tracking code is disabled; no real third-party tracking scripts load.
 
-The site uses 16 construction photographs and the original logo from the archived source site, following the user’s explicit reuse instruction. Responsive derivatives and source hashes are committed; private originals are not required for a fresh build. A copywriter rewrote the content using source-supported services. No project facts or case-study outcomes have been fabricated.
+The site uses 16 construction photographs and the original logo from the archived source site, following the user’s explicit reuse instruction. The user’s ten generated images supply the hero and nine service illustrations, visibly labelled and kept separate from actual portfolio work. See [illustration provenance](docs/illustration-manifest.csv). Responsive derivatives and source hashes are committed; private originals are not required for a fresh build. A copywriter rewrote the content using source-supported services. No project facts or case-study outcomes have been fabricated.
 
 ## Deployment
 

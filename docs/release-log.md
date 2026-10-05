@@ -28,3 +28,7 @@ Integrated the supplied scaffold tooling into REgardin_GPT on main and reconcile
 ## Photograph consistency correction — 05/10/2026
 
 Source-verified CSS crops remove letterboxing and baked-in blurred margins across hero, service and gallery photos. One 4:3 frame system and a quieter text-only nine-service homepage index address the user's visual rejection. Original image files and contacts remain unchanged. Complete-row and new crop-coverage checks are included; release verification is reported after push to main.
+
+## User-supplied illustration release — 05/10/2026
+
+Ten supplied high-resolution images are integrated as labelled hero/service illustrations with consistent 4:3 frames. The nine-service text index and actual-work portfolio remain intact. Includes responsive AVIF/WebP, updated social previews, provenance manifest, loaded desktop/mobile screenshots and refreshed cPanel ZIP/checksum. Local release gates pass: 49 browser checks, 25 unit/PHP checks, 24-route build/link/HTML/banned-copy/lint validation and five-route Lighthouse performance 96–100/accessibility 100. Push and live deployment verification are reported separately in the publishing receipt.

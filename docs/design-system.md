@@ -17,3 +17,7 @@ This follows Apple's recommendation to reserve Liquid Glass for controls and nav
 All construction photographs now use one edge-to-edge 4:3 presentation. Explicit source crop rectangles exclude blurred padding baked into ten source exports; no photo is stretched. Hero, portfolio, selected work and service photos share this presentation. Original files and committed derivatives remain unchanged. No stock badges, fabricated statistics or generated construction photographs are used.
 
 References: https://developer.apple.com/design/human-interface-guidelines/materials ; https://www.nngroup.com/articles/good-visual-design/ ; https://web.dev/articles/vitals . Reviewed 04/10/2026.
+
+## Supplied illustrations — 05/10/2026
+
+Use the ten user-supplied 2400 × 1792 PNGs for the homepage hero and nine service lead images. Responsive exports preserve source proportions; shared frames crop only the slight difference to 4:3. Keep visible illustration attribution and descriptive AI-labelled alt text. Never mix generated images into the actual-work portfolio. The homepage service index stays text-based, while the services hub displays nine equal illustrations in complete rows. Source provenance is recorded in illustration-manifest.csv. AVIF and WebP derivatives reach 2048 pixels; hero exports remain below 200 KB each. Source PNGs retain their original quality privately.
